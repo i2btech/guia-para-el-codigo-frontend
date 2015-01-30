@@ -8,7 +8,8 @@ Introducción
 Esta guía ha sido formulada con mucho cariño con el propósito de normalizar el código fuente realizado para los proyectos y clientes en [I2B](http://www.i2btech.com/), a través de herramientas que ayuden a acelerar y mejorar el proceso de creación de código para la web como lo son **Jade** y **Stylus**. Se siguen convenciones estándares de HTML y CSS pero se optimizan y normalizan varias reglas implícitas, dejando lugar al uso de criterio de cada integrante del equipo de desarrollo web.
 
 
-##Estructura de Archivos
+Estructura de Archivos
+=====
 - Para una mejor semántica se propone separar los archivos base (*source*) de los procesados y finales (*dist*). La estructura de archivos se muestra a continuación:
 
 ```
@@ -54,7 +55,8 @@ proyecto/
 				|__ anyexternallib.min.js
 ```
 
-##HTML
+HTML
+=====
 
 ###Sintaxis
 
@@ -124,7 +126,8 @@ a.list-item.active(href='')
 	* estructura de carpetas estándar
 
 
-##CSS
+CSS
+=====
 
 ###Encabezado
 - En todo archivo CSS base se colocará dentro de las primeas líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
@@ -219,7 +222,7 @@ margin: 0.5em
 - Define todos los colores como variables y sus matices con operaciones como `darken()` y `lighten()`
 
 - En caso de tener colores en hexacromía prefiere resumirlos con sólo 3 caracteres:
-- 
+
 ``` css
 // Bien
 color: #f00
@@ -282,9 +285,9 @@ selector.clase {}
 
 ###Mixins
 
----
 
-##JavaScript
+JavaScript
+=====
 
 ### Encabezado
 
@@ -299,7 +302,8 @@ selector.clase {}
 ### Librerías
 
 
-##Herramientas
+Herramientas
+=====
 
 * [Stylus](http://learnboost.github.io/stylus/)
 * [Jade](http://jade-lang.com/reference/)
