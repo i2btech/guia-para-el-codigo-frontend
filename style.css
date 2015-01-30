@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 
+body {
+	font-size: 14px;
+}
+
 .i2b {
 	color: #eee;
 	font-family: 'Oswald', sans-serif;
@@ -19,24 +23,22 @@
 	line-height: 1.7;
 }
 .i2b h1 {
-	font-size: 300%;
-	line-height: 1.2;
+	font-size: 4em;
+	font-weight: bold;
+	line-height: 1.3;
 	text-align: center;
-	margin: 170px 0 0;
+	margin: 170px 0 20px;
 }
 .i2b p {
-	color: #b8eaea;
-	font-weight: bold;
-	font-size: 1.3em;
+	font-size: 1.5em;
 }
 .i2b h5 {
-	margin-top: 150px;
-	font-family: montserrat, sans-serif;
+	margin-top: 10px;
 	font-weight: bold;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	font-size: 1.8em;
+	font-size: 1.1em;
 }
 .i2b h5 span {
 	display: inline-block;
