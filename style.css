@@ -7,17 +7,20 @@ body {
 	background-color: black;
 	text-shadow: none;
 }
-.header > * {
+.header h1 {
 	color: white;
 	text-transform: uppercase;
 }
 a,
-.menu a {
+.level-2 a {
 	color: red;
 }
 a:hover,
-.menu a:hover {
+.level-2 a:hover {
 	color: #666;
+}
+.content h1, .content h2, .content h3, .menu a.level-1 {
+	font-family: 'Oswald', sans-serif;
 }
 
 .i2b {
@@ -49,7 +52,7 @@ a:hover,
 	font-size: 1.5em;
 }
 .i2b h5 {
-	margin-top: 10px;
+	margin-top: 100px;
 	font-weight: bold;
 	color: #fff;
 	text-transform: uppercase;
