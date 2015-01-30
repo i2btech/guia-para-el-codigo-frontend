@@ -1,0 +1,45 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
+.i2b {
+	color: #eee;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+	background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color: #282828;
+	background-size: 16px 16px;
+}
+.i2b .headline {
+	vertical-align: middle;
+	display: inline-block;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 40px;
+	padding-right: 40px;
+	max-width: 800px;
+	line-height: 1.7;
+}
+.i2b h1 {
+	font-size: 300%;
+	line-height: 1.2;
+	text-align: center;
+	margin: 170px 0 0;
+}
+.i2b p {
+	color: #b8eaea;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.i2b h5 {
+	margin-top: 150px;
+	font-family: montserrat, sans-serif;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 1.8em;
+}
+.i2b h5 span {
+	display: inline-block;
+	padding: 5px 20px;
+	border: solid 3px #fff;
+}
