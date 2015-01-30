@@ -25,7 +25,7 @@ a:hover,
 	font-family: 'Roboto', sans-serif;
 }
 .menu a.level-1 {
-	color: black;
+	color: black!important;
 	font-weight: normal;
 	font-size: 1.1em;
 }
