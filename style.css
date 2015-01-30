@@ -3,6 +3,22 @@
 body {
 	font-size: 14px;
 }
+.header {
+	background-color: black;
+	text-shadow: none;
+}
+.header > * {
+	color: white;
+	text-transform: uppercase;
+}
+a,
+.menu a {
+	color: red;
+}
+a:hover,
+.menu a:hover {
+	color: #666;
+}
 
 .i2b {
 	color: #eee;
