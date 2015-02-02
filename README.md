@@ -89,7 +89,7 @@ head
 ```
 	  
 ###Atributos
-- Al utilizar *Jade* em caso de colocar texto dentro de etiquetas, involucra agregar barras `|` (*pipes*) para separar texto plano de etiquetas inline anidadas (como strong ó em). Se requiero evitar el uso de estas barras, colocando el texto seguido de la etiqueta bloque que la contenga y utilizando HTML para etiquetas inline, como en el siguiente ejemplo.
+- Al utilizar *Jade* en caso de colocar texto dentro de etiquetas, se usa agregar barras `|` (*pipes*) para separar texto plano de etiquetas inline anidadas (como strong ó em). Se requiero evitar el uso de estas barras, colocando el texto seguido de la etiqueta bloque que la contenga y utilizando HTML para etiquetas inline, como en el siguiente ejemplo:
 
 ``` css
 // Incorrecto
@@ -125,12 +125,16 @@ a.list-item.active(href='')
 	* mixins básicos
 	* estructura de carpetas estándar
 
+HTML Boilerplate >
 
 CSS
 =====
 
+###Inclusión
+- El(los) archivo(s) CSS deben ser incluídos en las páginas HTML que correspondan a su uso lo más cerca posible del cierre de la etiqueta `</head>`. En HTML5 ya no hay necesidad de utilizas el atributo `type` ya que es el servidor que se encarga de determinar el correcto `MIME type`.
+
 ###Encabezado
-- En todo archivo CSS base se colocará dentro de las primeas líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
+- En todo archivo CSS base se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
 
 ``` css
 /* ===========
@@ -153,11 +157,11 @@ selector
 ###Pre-processing
 - Utilizamos [Stylus](http://learnboost.github.io/stylus/) como pre-processor para CSS.
 
-- Privilegia el uso de *mixins* y funciones, pero no abuses.
+- Privilegia el uso de *mixins* y funciones, pero no abuses. Evita utilizar *@entend*.
 
 - No indentes más de 3 niveles de especificidad.
 
-- Guarda valores repetitios en variables con nomenclatura clara. Recuerda que puedes crear *scope* para la misma variable.
+- Guarda valores repetitivos en variables con nomenclatura clara. Recuerda que puedes crear *scope* para la misma variable.
 
 - Agrega un salto de línea vacío antes de comenzar un nuevo elementos o declaración de elementos para mantener legibilidad en el código fuente.
 
@@ -259,8 +263,8 @@ color: #ff0000
 selector.clase {}
 ```
 
-###Nomenclatura de clases
-- Para nombres compuestos utiliza guión `-`, no guión bajo `_` (*underscore*).
+###Nomenclatura de clases y ID's
+- Para nombres compuestos utiliza guión `-`, no guión bajo `_` (*underscore*). Nunca comiences con un dígito.
 
 - Si manipulas elementos HTML con JavaScript, utiliza el atributo HTML5 `data-` para identificarlo y definir/guardar su valor. Si prefieres utilizar clases, utiliza elprefijo `js-` sólo si se utilizarán para tal propósito.
 
@@ -289,17 +293,104 @@ selector.clase {}
 JavaScript
 =====
 
+###Inclusión
+- El(los) archivo(s) JavaScript deben ser incluídos en las páginas HTML que correspondan a su uso lo más cerca posible del cierre de la etiqueta `</body>`, reduciendo el efecto de demoras impuesta por la carga del script y otros componentes de la página. En HTML5 ya no hay necesidad de utilizar los atributos `language` ó `type` ya que es el servidor que se encarga de determinar el correcto `MIME type`.
+
 ### Encabezado
+- En todo archivo JS se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
+
+``` javascript
+/* ===========
+ * Proyecto:
+ * Fecha Inicio:
+ * Desarrollador:
+ * ======== */
+```
 
 ### Sintaxis
-
-### Declaraciones
+- Utiliza 2 espacios (*soft tab*) / 1 tab (*hard tab*) para indentar.
+- Usa doble comilla `"` (*double quote*) para abrir y cerrar atributos, propiedades, valores, etc.
 
 ### Comentarios
+- Para cada nueva función, utiliza el siguiente bloque de comentario como formato base para documentar
 
-### Nomenclatura
+``` javascript
+/**
+ * Nombre descriptivo
+ * Funcionalidad / qué hace
+ * Desarrollador: Nombre de quien hizo esto
+ * Uso:
+  	var funcion = function (
+		@param1: int|bool|element|rangos|etc,
+		@param2: int|bool|element|rangos|etc
+	);,
+	Return: bool;
+ * Lugar: Dónde se utiliza (elemento, página, etc)
+ */
+```
+
+### Nomenclaturas
+- Los archivos JavaScript creados deben tener su nombre en minúsculas, sin espacios ni caracteres especiales. Si el contenido del archivo corresponde a un plugin para jQuery, éste debe identificarse claramente como dependiente de tal librería y se permite el uso del nombre en minusculaMayuscula (*camelCase*), de la siguiente manera:
+
+```
+jquery.nombrePlugin-version.min.js
+```
+
+- Crea nombres de funciones, parámetros, métodos, variables y atributos que sean descriptivas al contexto y/o función que cumple el elemento. 
+
+``` css
+// Bien
+function ventanaModal(){}
+```
+
+- Todas las variables deben ser declaradas antes de ser utilizadas. Prefiere que cada variable dea declarada en una nueva línea y con su comentario inline. Si dependes directamente de jQuery, utiliza `$` antes del nombre de la variable:
+
+``` javascript
+var $elemento, 	// this
+	 $indent,	// nivel de indentación
+	 $ancho;	// ancho del elemento sin el valor
+```
+
+- El uso de variables globales debe ser sólo si realmente necesarias. Si la declaras, utiliza MAYUSCULA en su nombre para identificarla claramente.
+
+- if/else, switch, for, try, catch deben responder al siguiente formato de espaciado, para mejor lectura y ordenamiento:
+
+``` javascript
+if ( condicion ) {
+	//
+} else if ( condicion ) {
+	//
+} else {
+	//
+}
+
+switch ( expresion ) {
+	case expresion:
+		//
+	default:
+		//
+}
+```
+- Siempre coloca 1 espacio alrededor de operadores:
+
+``` javascript
+var x = (y + z) * w;
+
+for (i = 0; i < 10; i++) {
+    x += i;
+}
+```
 
 ### Librerías
+
+- Para mejor retro-compatibilidad y mayor rapidez en el desarrollo, en I2B utilizamos jQuery como librería por defecto. Prefiere el branch 1.1x que continúa con soporte a IE7+.
+
+- Llama jQuery primero desde un **CDN** y seguido la copia local, como en el siguiente ejemplo:
+
+``` html
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write(unescape('%3Cscript src="js/libs/jquery-1.11.1.min.js"%3E%3C/script%3E'))</script>
+```
 
 
 Herramientas
