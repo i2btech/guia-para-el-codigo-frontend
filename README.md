@@ -87,9 +87,17 @@ head
 	meta(charset='utf-8')
 	title ★★★☆☆
 ```
+
+###Inclusión
+
+- En ambiente productivo, para evitar errores con certificados SSL se debe omitir el protocolo al llamar archivos:
+
+``` html
+<img src="//www.dominio.com/imagen.jpg" alt="" />
+```
 	  
 ###Atributos
-- Al utilizar *Jade* en caso de colocar texto dentro de etiquetas, se usa agregar barras `|` (*pipes*) para separar texto plano de etiquetas inline anidadas (como strong ó em). Se requiero evitar el uso de estas barras, colocando el texto seguido de la etiqueta bloque que la contenga y utilizando HTML para etiquetas inline, como en el siguiente ejemplo:
+- Al utilizar *Jade* y de ser necesario colocar texto dentro de etiquetas, comúnmente se utizan barras `|` (*pipes*) para separar texto plano de etiquetas inline anidadas (como *strong* ó *em*). En lo posible evitar el uso de estas barras colocando el texto seguido de la etiqueta bloque que la contenga y utilizando HTML para etiquetas inline, como en el siguiente ejemplo:
 
 ``` css
 // Incorrecto
@@ -125,7 +133,7 @@ a.list-item.active(href='')
 	* mixins básicos
 	* estructura de carpetas estándar
 
-HTML Boilerplate >
+[HTML Boilerplate >](#)
 
 CSS
 =====
