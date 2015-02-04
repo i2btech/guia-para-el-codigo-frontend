@@ -29,6 +29,9 @@ a:hover,
 	font-weight: normal;
 	font-size: 1.1em;
 }
+.content pre > code {
+	letter-spacing: 0;
+}
 
 .i2b {
 	color: #eee;
