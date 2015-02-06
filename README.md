@@ -90,7 +90,7 @@ head
 
 ###Inclusión
 
-- En ambiente productivo, para evitar errores con certificados SSL se debe omitir el protocolo al llamar archivos:
+- En ambiente productivo, para evitar errores con certificados SSL se debe omitir el protocolo al llamar archivos de forma absoluta:
 
 ``` html
 <img src="//www.dominio.com/imagen.jpg" alt="" />
@@ -139,7 +139,7 @@ CSS
 =====
 
 ###Inclusión
-- El(los) archivo(s) CSS deben ser incluídos en las páginas HTML que correspondan a su uso lo más cerca posible del cierre de la etiqueta `</head>`. En HTML5 ya no hay necesidad de utilizas el atributo `type` ya que es el servidor que se encarga de determinar el correcto `MIME type`.
+- El(los) archivo(s) CSS debe(n) ser incluído(s) en las páginas HTML que correspondan a su uso lo más cerca posible del cierre de la etiqueta `</head>`. En HTML5 ya no hay necesidad de utilizar el atributo `type` ya que es el servidor que se encarga de determinar el correcto `MIME type`.
 
 ###Encabezado
 - En todo archivo CSS base se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
@@ -155,7 +155,7 @@ CSS
 ###Sintaxis
 - Utiliza 2 espacios (*soft tab*) / 1 tab (*hard tab*) para indentar.
 
-- Utiliza `:` al definir el valor de la propiedad, aunq *Stylus* permita omitirlo, y separa este valor de la propiedad con un espacio.
+- Utiliza `:` al definir el valor de la propiedad, aunque *Stylus* permita omitirlo, y separa este valor de la propiedad con un espacio.
 
 ``` css
 selector
@@ -274,7 +274,7 @@ selector.clase {}
 ###Nomenclatura de clases y ID's
 - Para nombres compuestos utiliza guión `-`, no guión bajo `_` (*underscore*). Nunca comiences con un dígito.
 
-- Si manipulas elementos HTML con JavaScript, utiliza el atributo HTML5 `data-` para identificarlo y definir/guardar su valor. Si prefieres utilizar clases, utiliza elprefijo `js-` sólo si se utilizarán para tal propósito.
+- Si manipulas elementos HTML con JavaScript, utiliza el atributo HTML5 `data-` para identificarlo y definir/guardar su valor. Si prefieres utilizar clases, utiliza el prefijo `js-` sólo si se utilizarán para tal propósito.
 
 ``` html
 // Bien
@@ -289,14 +289,14 @@ selector.clase {}
 .modal {}
 
 // Mal
-.rojo {}
+.grande {}
 ```
 
 ###Media Queries
 - Declara `@media` queries al final del archivo CSS, donde se definan modificaciones al comportamiento/estilo de elementos ya declarados.
 
 ###Mixins
-
+TODO
 
 JavaScript
 =====
@@ -305,7 +305,7 @@ JavaScript
 - El(los) archivo(s) JavaScript deben ser incluídos en las páginas HTML que correspondan a su uso lo más cerca posible del cierre de la etiqueta `</body>`, reduciendo el efecto de demoras impuesta por la carga del script y otros componentes de la página. En HTML5 ya no hay necesidad de utilizar los atributos `language` ó `type` ya que es el servidor que se encarga de determinar el correcto `MIME type`.
 
 ### Encabezado
-- En todo archivo JS se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
+- En todo archivo JavaScript se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
 
 ``` javascript
 /* ===========
@@ -320,20 +320,21 @@ JavaScript
 - Usa doble comilla `"` (*double quote*) para abrir y cerrar atributos, propiedades, valores, etc.
 
 ### Comentarios
-- Para cada nueva función, utiliza el siguiente bloque de comentario como formato base para documentar
+- Para cada nueva función, utiliza el siguiente bloque de comentario como formato base para documentar:
 
 ``` javascript
 /**
  * Nombre descriptivo
  * Funcionalidad / qué hace
+ * Lugar: Dónde se utiliza (elemento, página, etc)
  * Desarrollador: Nombre de quien hizo esto
  * Uso:
   	var funcion = function (
 		@param1: int|bool|element|rangos|etc,
 		@param2: int|bool|element|rangos|etc
-	);,
-	Return: bool;
- * Lugar: Dónde se utiliza (elemento, página, etc)
+	) {
+		return: bool;
+	};
  */
 ```
 
@@ -351,7 +352,7 @@ jquery.nombrePlugin-version.min.js
 function ventanaModal(){}
 ```
 
-- Todas las variables deben ser declaradas antes de ser utilizadas. Prefiere que cada variable dea declarada en una nueva línea y con su comentario inline. Si dependes directamente de jQuery, utiliza `$` antes del nombre de la variable:
+- Todas las variables deben ser declaradas antes de ser utilizadas. Prefiere que cada variable sea declarada en una nueva línea y con su comentario inline. Si dependes directamente de jQuery, utiliza `$` antes del nombre de la variable:
 
 ``` javascript
 var $elemento, 	// this
@@ -361,7 +362,7 @@ var $elemento, 	// this
 
 - El uso de variables globales debe ser sólo si realmente necesarias. Si la declaras, utiliza MAYUSCULA en su nombre para identificarla claramente.
 
-- if/else, switch, for, try, catch deben responder al siguiente formato de espaciado, para mejor lectura y ordenamiento:
+- if/else, switch, for, try, catch deben responder al siguiente formato de espaciado para mejor lectura y ordenamiento:
 
 ``` javascript
 if ( condicion ) {
@@ -379,7 +380,7 @@ switch ( expresion ) {
 		//
 }
 ```
-- Siempre coloca 1 espacio alrededor de operadores:
+- Siempre coloca 1 espacio antes y después de operadores:
 
 ``` javascript
 var x = (y + z) * w;
@@ -391,7 +392,7 @@ for (i = 0; i < 10; i++) {
 
 ### Librerías
 
-- Para mejor retro-compatibilidad y mayor rapidez en el desarrollo, en I2B utilizamos jQuery como librería por defecto. Prefiere el branch 1.1x que continúa con soporte a IE7+.
+- Para mejor retro-compatibilidad y mayor rapidez en el desarrollo, en I2B utilizamos [jQuery](http://www.jquery.com/) como librería JavaScript por defecto. Prefiere el branch 1.1x que continúa con soporte a IE7+.
 
 - Llama jQuery primero desde un **CDN** y seguido la copia local, como en el siguiente ejemplo:
 
@@ -399,6 +400,21 @@ for (i = 0; i < 10; i++) {
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write(unescape('%3Cscript src="js/libs/jquery-1.11.1.min.js"%3E%3C/script%3E'))</script>
 ```
+
+Lenguajes Server-Side
+=====
+
+TODO
+
+SEO/Métricas
+=====
+
+###Google Analytics
+
+###Google Tag Manager
+
+###Schema
+
 
 
 Herramientas
