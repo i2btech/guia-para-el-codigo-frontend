@@ -29,7 +29,10 @@ proyecto/
 |	|		|__ mixins.jade
 |	|
 |	|__ js
-|		|__ functions.js
+|	|	|__ functions.js
+|	|
+|	|__images
+|		|__ sprites
 |
 |__ gruntfile.js
 |__ package.json
@@ -42,17 +45,20 @@ proyecto/
 	|__ page.html
 	|__ assets
 		|__ css
-			|__ style.min.css
-			|__ libs
-				|__ anyexternallib.min.css
+		|	|__ style.min.css
+		|	|__ libs
+		|		|__ anyexternallib.min.css
 		|__ js
-			|__ functions.min.js
-			|__ libs
-				|__ jquery-1.11.1.min.js
-				|__ selectivizr.min.js
-				|__ modernize.min.js
-				|__ html5shiv.min.js
-				|__ anyexternallib.min.js
+		|	|__ functions.min.js
+		|	|__ libs
+		|		|__ jquery-1.11.1.min.js
+		|		|__ selectivizr.min.js
+		|		|__ modernize.min.js
+		|		|__ html5shiv.min.js
+		|		|__ anyexternallib.min.js
+		|
+		|__ images
+		
 ```
 
 HTML
@@ -400,6 +406,12 @@ for (i = 0; i < 10; i++) {
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write(unescape('%3Cscript src="js/libs/jquery-1.11.1.min.js"%3E%3C/script%3E'))</script>
 ```
+
+Imágenes
+=====
+
+TODO
+
 
 Lenguajes Server-Side
 =====
