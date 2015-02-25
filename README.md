@@ -5,23 +5,23 @@ Reglas estádares para escribir y mantener código frontend para proyectos web e
 Introducción
 -----
 
-Esta guía ha sido formulada con mucho cariño con el propósito de normalizar el código fuente realizado para los proyectos y clientes en [I2B](http://www.i2btech.com/), a través de herramientas que ayuden a acelerar y mejorar el proceso de creación de código para la web como lo son **Jade** y **Stylus**. Se siguen convenciones estándares de HTML y CSS pero se optimizan y normalizan varias reglas implícitas, dejando lugar al uso de criterio de cada integrante del equipo de desarrollo web.
+Esta guía ha sido formulada con mucho cariño con el propósito de normalizar el código fuente realizado para los proyectos y clientes en [I2B](http://www.i2btech.com/), a través de herramientas que ayuden a acelerar y mejorar el proceso de creación de código web como lo son **Jade**, **Handlebars** y **SCSS**. Se siguen convenciones estándares de HTML y CSS pero se optimizan y normalizan varias reglas implícitas, dejando lugar al uso de criterio de cada integrante del equipo de desarrollo web.
 
 
 Estructura de Archivos
 =====
-- Para una mejor semántica se propone separar los archivos base (*source*) de los procesados y finales (*dist*). La estructura de archivos se muestra a continuación:
+- Para una mejor semántica se propone separar los archivos base (*source*) de los procesados y finales (*dist*). La estructura de archivos se muestra a continuación y dependerá del uso de las tecnologías:
 
 ```
 proyecto/
 |__ src
-|	|__ styl
-|	|	|__ style.styl
+|	|__ scss
+|	|	|__ scss
 |	|	|__ inc
-|	|		|__ mixins.styl
-|	|		|__ normalize.css
-|	|		|__ colors.styl
-|	|		|__ variables.styl
+|	|		|__ mixins.scss
+|	|		|__ normalize.scss
+|	|		|__ colors.scss
+|	|		|__ variables.scss
 |	|
 |	|__ jade
 |	|	|__ page.jade
@@ -72,10 +72,17 @@ HTML
 ###Sintaxis
 
 - Utiliza 2 espacios (*soft tab*) / 1 tab (*hard tab*) para indentar. Se configuran en [Sublime Text](http://www.sublimetext.com/docs/2/indentation.html), [Textmate](http://manual.macromates.com/en/working_with_text), [Emacs](http://www.emacswiki.org/emacs/NoTabs).
-
 - El doctype por defecto será HTML5: `doctype html`
+- Usa doble comilla `"` (*double quote*) para abrir y cerrar atributos, aunque el estándar no lo requiera.
+- Prefiere atributos simples en los que su valor sea el mismo del atributo, por ejemplo:
 
-- Usa doble comilla `"` (*double quote*) para abrir y cerrar atributos.
+``` html
+// Evita:
+<input required="required" />
+
+// Prefiere:
+<input required />
+```
 
 - Agrega un salto de línea vacío antes de comenzar un nuevo bloque de elementos que sean importantes para mantener legibilidad en el código fuente.
 
@@ -97,14 +104,6 @@ html(lang='es')
 head
 	meta(charset='utf-8')
 	title ★★★☆☆
-```
-
-###Inclusión
-
-- En ambiente productivo, para evitar errores con certificados SSL se debe omitir el protocolo al llamar archivos de forma absoluta:
-
-``` html
-<img src="//www.dominio.com/imagen.jpg" alt="" />
 ```
 	  
 ###Atributos
@@ -130,13 +129,13 @@ a.list-item.active(href='')
 ###Semántica y accesibilidad
 - Para estructurar el contenido se utilizará como base el uso de [seccionamiento de HTML5](http://blog.teamtreehouse.com/use-html5-sectioning-elements): `section, nav, aside, article, main, header, footer`.
 
-- Para mayor y mejor accesibilidad se agregarán [roles ARIA](http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/) que le agregarán sentido a áreas específicas de cada página.
+- Para mayor y mejor accesibilidad se agregarán [roles ARIA](http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/) que le agregarán sentido a áreas específicas de cada página. Más detalles en sección [WAI-ARIA](#WAI-ARIA).
 
 ###HTML Boilerplate
 - Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto, entre ellos:
 
 	* GruntJS
-	* Stylus (CSS pre-processor)
+	* SCSS (CSS pre-processor)
 	* Jade (HTML pre-processor)
 	* jQuery.js
 	* html5shiv.js
@@ -166,15 +165,8 @@ CSS
 ###Sintaxis
 - Utiliza 2 espacios (*soft tab*) / 1 tab (*hard tab*) para indentar.
 
-- Utiliza `:` al definir el valor de la propiedad, aunque *Stylus* permita omitirlo, y separa este valor de la propiedad con un espacio.
-
-``` css
-selector
-	propiedad: valor
-```
-
 ###Pre-processing
-- Utilizamos [Stylus](http://learnboost.github.io/stylus/) como pre-processor para CSS.
+- Utilizamos [SCSS](http://sass-lang.com/) como pre-processor para CSS, el que es la versión 3 de **SASS**.
 
 - Privilegia el uso de *mixins* y funciones, pero no abuses. Evita utilizar *@entend*.
 
@@ -184,19 +176,34 @@ selector
 
 - Agrega un salto de línea vacío antes de comenzar un nuevo elementos o declaración de elementos para mantener legibilidad en el código fuente.
 
-- Si defines estilos para más de un selector, sepáralos con un salto de línea
+``` css
+selector {
+	propiedad: valor;
+}
+
+otroselector {
+	propiedad1: valor1;
+	propiedad2: valor2;
+}
+```
+
+- Si defines estilos para más de un selector hijo, sepáralos con un salto de línea
 
 ``` css
-selector
-	propiedad: valor
+selector {
+	propiedad: valor;
 	  
-	.selector-hijo
-		selector2
-			propiedad1: valor1
-			propiedad2: valor2
+	.selector-hijo {
+		selector2 {
+			propiedad1: valor1;
+			propiedad2: valor2;
 
-			&:hover
-				propiedad: valor
+			&:hover {
+				propiedad: valor;
+			}
+		}
+	}
+}
 ```
 
 ###Declaraciones
@@ -208,17 +215,18 @@ selector
 	 * otros
 
 ``` css
-selector
-	display: block
-	width: 100px
-	height: 100px
-	position: absolute
-	top: 0
-	left: 0
-	font-family: sans-serif
-	line-height: 1.5
-	background: black
-	cursor: pointer
+selector {
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: sans-serif;
+	line-height: 1.5em;
+	background: black;
+	cursor: pointer;
+}
 ```
 
 ###Unidades y colores
@@ -226,36 +234,41 @@ selector
 
 ``` css
 // Bien
-padding: 0
+padding: 0;
 
 // Omite
-padding: 0px
+padding: 0px;
 ```
 
 - Omite el `0` si este se encuentra a la izquierda del valor:
 
 ``` css
 // Bien
-margin: .5em
+margin: .5em;
 
 // Omite
-margin: 0.5em
+margin: 0.5em;
 ```
 
-- Define todos los colores como variables y sus matices con operaciones como `darken()` y `lighten()`
+- Define todos los colores como variables y sus matices con operaciones como `darken()` y `lighten()`, por ejemplo:
+
+```css
+$alerta: #f00; // rojo
+$alertaHover: darken($alerta, 20%); // 20% más rojo oscuro
+```
 
 - En caso de tener colores en hexacromía prefiere resumirlos con sólo 3 caracteres:
 
 ``` css
 // Bien
-color: #f00
+color: #f00;
 
 // Omite
-color: #ff0000
+color: #ff0000;
 ```
 
 ###Comentarios
-- Comenta grandes bloques de secciones de la siguiente manera:
+- Comenta grandes bloques de secciones de la siguiente manera (mayúsculas):
 
 ``` css
 /* -----------
@@ -263,7 +276,7 @@ color: #ff0000
  * -------- */
 ```
 
-- Para comentarios menores, de orden local o para recordar algo, con Stylus utiliza `//` ya que se emitirá al compilar:
+- Para comentarios menores, de orden local o para recordar algo, con pre-processors utiliza `//` ya que se emitirá al compilar a CSS:
 
 ``` css
 // cambio de color al :target
@@ -285,7 +298,7 @@ selector.clase {}
 ###Nomenclatura de clases y ID's
 - Para nombres compuestos utiliza guión `-`, no guión bajo `_` (*underscore*). Nunca comiences con un dígito.
 
-- Si manipulas elementos HTML con JavaScript, utiliza el atributo HTML5 `data-` para identificarlo y definir/guardar su valor. Si prefieres utilizar clases, utiliza el prefijo `js-` sólo si se utilizarán para tal propósito.
+- Si manipulas elementos HTML con JavaScript, utiliza el atributo HTML5 `data-` para identificarlo y definir/guardar su valor. Si prefieres utilizar clases, utiliza el prefijo `js-` sólo si se utilizarán para tal propósito y no para darle estilo.
 
 ``` html
 // Bien
@@ -298,9 +311,11 @@ selector.clase {}
 ``` css
 // Bien
 .modal {}
+.titulo {}
 
 // Mal
 .grande {}
+.rojo {}
 ```
 
 ###Media Queries
@@ -363,6 +378,9 @@ jquery.nombrePlugin-version.min.js
 ``` css
 // Bien
 function ventanaModal(){}
+
+// Mal
+function cerrar(){}
 ```
 
 - Todas las variables deben ser declaradas antes de ser utilizadas. Prefiere que cada variable sea declarada en una nueva línea y con su comentario inline. Si dependes directamente de jQuery, utiliza `$` antes del nombre de la variable:
@@ -433,8 +451,41 @@ URL's
 Imágenes
 =====
 
-TODO
+- Los formatos de imágenes soportados para web en la actualidad son: **JPG**, **PNG** y **GIF**. **SVG** es soportado con *fallback* a **PNG**.
+- Toda imagen debe ser comprimida según sea el mejor método según el formato. Se recomienda aplicarlo desde GruntJS a través del plugin **grunt-image** el que soporta los siguientes métodos de compresión:
+	- pngquant
+   - optipng
+   - advpng
+   - zopflipng
+   - pngcrush
+   - pngout
+   - mozjpeg
+   - jpegRecompress
+   - jpegoptim
+   - gifsicle
+   - svgo
+- Se debe priorizar el uso de sprites para todo tipo de imágenes que sean linkeadas a través de hojas de estilos CSS como íconos, logos. La única excepción son imágenes de fondo que funcionen como un patrón. Para la generación automática de sprites se deben guardar en `src/images/sprites`:
 
+```
+proyecto/
+|__ src
+	|__images
+		|__ sprites
+```
+
+Y un archivo `sprites.png` y `sprites.scss` serán automáticamente generados en:
+
+```
+|__ scss
+|	|	|__ scss
+|	|	|__ inc
+|	|		|__ sprites.scss
+|	|
+|__ dist
+	|__ assets
+		|__ images/sprites.png
+		
+```
 
 Lenguajes Server-Side
 =====
@@ -479,7 +530,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 ###Schema
 
-TODO
+SEO es una parte esencial del marketing online y la correcta implementación de Schema en la estrategia es un fuerte apoyo. Los datos estructurados agregan información semántica al contenido y a las páginas que no son simples de interpretar y ayudan a que sean catalogados con más exactitud. Los principales atributos que se utilizan en sitios enfocados al comercio electrónico de productos (retail) son:
+
+- Product rating
+- brands model
+- Offers & reviews
+- Product ID
+
+Y su implementación en una caja de producto, mediante código HTML (a modo de ejemplo):
+
+```html
+<div class="producto" itemscope itemtype="http://schema.org/Product">   
+  <img src="samsung-tv-led-42.jpg" itemprop="image">
+  <h1>
+    <span itemprop="brand">Samsung</span>
+    <span itemprop="name">TV LED 42 pulgadas</span>
+    <span itemprop="sku">506246</span>
+  </h1>
+  <div itemprop="aggregareRating" itemscope itemtype="http://schema.org/aggregateRating">
+    <span itemprop="ratingvalue">8</span> de <span itemprop="bestRating">10</span> basado en <span itemprop="ratingCount">87</span> opiniones de usuarios.
+  </div>
+  <div itemprop="offers" itemscope itemtype="http://schema.org/aggregateOffers">
+    Antes: <span itemprop="highPrice">$189.990</span>
+    Oferta: <span itemprop="lowPrice">$149.990</span>
+  </div>
+</div>
+```
 
 WAI-ARIA
 =====
@@ -489,7 +565,7 @@ Para mejor accesibilidad para mecanismos de ayuda para usuarios con discapacidad
 Herramientas
 =====
 
-* [Stylus](http://learnboost.github.io/stylus/)
+* [SCSS](http://sass-lang.com/)
 * [Jade](http://jade-lang.com/reference/)
 * [Emmet](http://emmet.io/)
 * [CSS Hat](https://csshat.com/)
