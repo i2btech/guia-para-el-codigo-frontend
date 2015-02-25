@@ -571,11 +571,17 @@ Para mejor accesibilidad para mecanismos de ayuda para usuarios con discapacidad
 Herramientas
 =====
 
-* [SCSS](http://sass-lang.com/)
-* [Jade](http://jade-lang.com/reference/)
-* [Emmet](http://emmet.io/)
-* [CSS Hat](https://csshat.com/)
-* [Normalize.css](http://necolas.github.io/normalize.css/)
-* [Handlebars](http://handlebarsjs.com/)
-* [Jeet Grid System](http://jeet.gs/)
+- [SCSS](http://sass-lang.com/)
+- [Jade](http://jade-lang.com/reference/)
+- [Emmet](http://emmet.io/)
+- [CSS Hat](https://csshat.com/)
+- [Normalize.css](http://necolas.github.io/normalize.css/)
+- [Handlebars](http://handlebarsjs.com/)
+- [Jeet Grid System](http://jeet.gs/)
 
+#####Contributor
+- [Jorge Epuñan](https://github.com/juanbrujo/)
+
+#####Changelog
+- first commit: 20150130
+- version 0.9: 20150225
