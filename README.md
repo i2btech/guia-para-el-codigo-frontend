@@ -28,6 +28,11 @@ proyecto/
 |	|	|__ inc
 |	|		|__ mixins.jade
 |	|
+|	|__ handlebars
+|	|	|__ template.handlebars
+|	|	|__ inc
+|	|		|__ data.json
+|	|
 |	|__ js
 |	|	|__ functions.js
 |	|
@@ -302,7 +307,9 @@ selector.clase {}
 - Declara `@media` queries al final del archivo CSS, donde se definan modificaciones al comportamiento/estilo de elementos ya declarados.
 
 ###Mixins
+
 TODO
+
 
 JavaScript
 =====
@@ -407,6 +414,22 @@ for (i = 0; i < 10; i++) {
 <script>window.jQuery || document.write(unescape('%3Cscript src="js/libs/jquery-1.11.1.min.js"%3E%3C/script%3E'))</script>
 ```
 
+URL's
+=====
+
+- Prefiere URL's relativas si linkeas archivos CSS, Javascript e imágenes.
+- Si tienes enlaces externos (por ejemplo librerías JavaScript, tipografías a través de un CDN) evita el uso del protocolo en la URL:
+
+
+``` css
+// Bien
+<script src="//www.dominio.com
+
+// Evita
+<script src="http://www.dominio.com
+```
+
+
 Imágenes
 =====
 
@@ -423,11 +446,45 @@ SEO/Métricas
 
 ###Google Analytics
 
+Utiliza el siguiente código antes del cierre de `</head>`, reemplazando **UA-XXXX-Y** por el de la cuenta de Analytics final:
+
+```html
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-XXXX-Y', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+```
+
 ###Google Tag Manager
+
+Utiliza el siguiente código luego de abierto la etiqueta `<body>`, reemplazando **GTM-XXXX** por el de la cuenta de Tag Manager final:
+
+```html
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXX');</script>
+<!-- End Google Tag Manager -->
+```
 
 ###Schema
 
+TODO
 
+WAI-ARIA
+=====
+
+Para mejor accesibilidad para mecanismos de ayuda para usuarios con discapacidad visual, los desarrollos web deben tener implementado **WAI-ARIA**, el estándar recomendado por la W3C para tales propósitos. [El esqueleto se puede encontrar en Github](https://github.com/I2BTech/ariabones) el cual estará en constante actualización.
 
 Herramientas
 =====
@@ -437,5 +494,6 @@ Herramientas
 * [Emmet](http://emmet.io/)
 * [CSS Hat](https://csshat.com/)
 * [Normalize.css](http://necolas.github.io/normalize.css/)
+* [Handlebars](http://handlebarsjs.com/)
 * [Jeet Grid System](http://jeet.gs/)
 
