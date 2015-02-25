@@ -200,6 +200,7 @@ selector {
 	propiedad: valor;
 	  
 	.selector-hijo {
+	
 		selector2 {
 			propiedad1: valor1;
 			propiedad2: valor2;
@@ -242,7 +243,7 @@ selector {
 // Bien
 padding: 0;
 
-// Omite
+// Evita
 padding: 0px;
 ```
 
@@ -252,7 +253,7 @@ padding: 0px;
 // Bien
 margin: .5em;
 
-// Omite
+// Evita
 margin: 0.5em;
 ```
 
@@ -269,7 +270,7 @@ $alertaHover: darken($alerta, 20%); // 20% más rojo oscuro
 // Bien
 color: #f00;
 
-// Omite
+// Evita
 color: #ff0000;
 ```
 
@@ -297,7 +298,7 @@ color: #ff0000;
 // Bien
 .clase {}
 
-// Omite
+// Evita
 selector.clase {}
 ```
 
@@ -319,7 +320,7 @@ selector.clase {}
 .modal {}
 .titulo {}
 
-// Mal
+// Evita
 .grande {}
 .rojo {}
 ```
@@ -336,7 +337,10 @@ JavaScript
 =====
 
 ###Inclusión
-- El(los) archivo(s) JavaScript deben ser incluídos en las páginas HTML que correspondan a su uso lo más cerca posible del cierre de la etiqueta `</body>`, reduciendo el efecto de demoras impuesta por la carga del script y otros componentes de la página. En HTML5 ya no hay necesidad de utilizar los atributos `language` ó `type` ya que es el servidor que se encarga de determinar el correcto `MIME type`.
+- El(los) archivo(s) JavaScript deben ser incluídos en las páginas HTML que correspondan a su uso lo más cerca posible del cierre de la etiqueta `</body>`, reduciendo el efecto de demoras impuesta por la carga del script y otros componentes de la página. En HTML5 ya no hay necesidad de utilizar los atributos `language` ó `type` ya que es el servidor que se encarga de determinar el correcto `MIME type`. Las excepciones a esto corresponden a librerías cuyas funcionalidades se basan en la construcción del DOM antes de su ejecución, como:
+	- Modernizr + Detectizr
+	- HTML5Shiv
+	- Google Analytics
 
 ### Encabezado
 - En todo archivo JavaScript se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
