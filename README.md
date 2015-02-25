@@ -2,6 +2,8 @@ Guía para el Código Frontend | I2B
 =====
 Reglas estádares para escribir y mantener código frontend para proyectos web en I2B
 
+Versión Web: [http://i2btech.github.io/guia-para-el-codigo-frontend/](http://i2btech.github.io/guia-para-el-codigo-frontend/)
+
 Introducción
 -----
 
@@ -130,6 +132,10 @@ a.list-item.active(href='')
 - Para estructurar el contenido se utilizará como base el uso de [seccionamiento de HTML5](http://blog.teamtreehouse.com/use-html5-sectioning-elements): `section, nav, aside, article, main, header, footer`.
 
 - Para mayor y mejor accesibilidad se agregarán [roles ARIA](http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/) que le agregarán sentido a áreas específicas de cada página. Más detalles en sección [WAI-ARIA](#wai-aria).
+
+###Template System
+
+TODO
 
 ###HTML Boilerplate
 - Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto, entre ellos:
