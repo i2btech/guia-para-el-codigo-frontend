@@ -129,7 +129,7 @@ a.list-item.active(href='')
 ###Semántica y accesibilidad
 - Para estructurar el contenido se utilizará como base el uso de [seccionamiento de HTML5](http://blog.teamtreehouse.com/use-html5-sectioning-elements): `section, nav, aside, article, main, header, footer`.
 
-- Para mayor y mejor accesibilidad se agregarán [roles ARIA](http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/) que le agregarán sentido a áreas específicas de cada página. Más detalles en sección [WAI-ARIA](#WAI-ARIA).
+- Para mayor y mejor accesibilidad se agregarán [roles ARIA](http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/) que le agregarán sentido a áreas específicas de cada página. Más detalles en sección [WAI-ARIA](#wai-aria).
 
 ###HTML Boilerplate
 - Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto, entre ellos:
