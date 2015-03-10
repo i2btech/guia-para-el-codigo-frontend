@@ -149,7 +149,7 @@ TODO
 	* mixins básicos
 	* estructura de carpetas estándar
 
-[HTML Boilerplate >](#)
+[HTML Boilerplate TODO >](#)
 
 CSS
 =====
@@ -496,6 +496,11 @@ Y un archivo `sprites.png` y `sprites.scss` serán automáticamente generados en
 		|__ images/sprites.png
 		
 ```
+
+Performance
+=====
+
+TODO
 
 Lenguajes Server-Side
 =====
