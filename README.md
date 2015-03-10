@@ -60,7 +60,7 @@ proyecto/
 		|	|__ libs
 		|		|__ jquery-1.11.1.min.js
 		|		|__ selectivizr.min.js
-		|		|__ modernize.min.js
+		|		|__ modernizr.min.js
 		|		|__ html5shiv.min.js
 		|		|__ anyexternallib.min.js
 		|
@@ -164,7 +164,7 @@ CSS
 /* ===========
  * Proyecto:
  * Fecha Inicio:
- * Desarrollador:
+ * Email Desarrollador:
  * ======== */
 ```
 
@@ -364,8 +364,8 @@ JavaScript
 /**
  * Nombre descriptivo
  * Funcionalidad / qué hace
- * Lugar: Dónde se utiliza (elemento, página, etc)
- * Desarrollador: Nombre de quien hizo esto
+ * Dónde: Dónde se utiliza (elemento, página, etc)
+ * Email Desarrollador: email de quien hizo esto
  * Uso:
   	var funcion = function (
 		@param1: int|bool|element|rangos|etc,
@@ -588,7 +588,7 @@ para crear código frontend, en I2B utilizaremos 2 software los cuales la empres
 TODO
 
 
-Herramientas
+Enlaces
 =====
 
 - [SCSS](http://sass-lang.com/)
