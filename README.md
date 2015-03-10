@@ -502,10 +502,6 @@ Performance
 
 TODO
 
-Lenguajes Server-Side
-=====
-
-TODO
 
 SEO/Métricas
 =====
@@ -576,6 +572,11 @@ WAI-ARIA
 =====
 
 Para mejor accesibilidad para mecanismos de ayuda para usuarios con discapacidad visual, los desarrollos web deben tener implementado **WAI-ARIA**, el estándar recomendado por la W3C para tales propósitos. [El esqueleto se puede encontrar en Github](https://github.com/I2BTech/ariabones) el cual estará en constante actualización.
+
+Deploy
+=====
+
+TODO
 
 Software
 =====
