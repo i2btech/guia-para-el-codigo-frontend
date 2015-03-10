@@ -73,7 +73,7 @@ HTML
 
 ###Sintaxis
 
-- Utiliza 2 espacios (*soft tab*) / 1 tab (*hard tab*) para indentar. Se configuran en [Sublime Text](http://www.sublimetext.com/docs/2/indentation.html), [Textmate](http://manual.macromates.com/en/working_with_text), [Emacs](http://www.emacswiki.org/emacs/NoTabs).
+- Utiliza 2 espacios (*soft tab*) / 1 tab (*hard tab*) para indentar. Se configura fácilmente, por ejemplo, en [Sublime Text](http://www.sublimetext.com/docs/2/indentation.html).
 - El doctype por defecto será HTML5: `doctype html`
 - Usa doble comilla `"` (*double quote*) para abrir y cerrar atributos, aunque el estándar no lo requiera.
 - Prefiere atributos simples en los que su valor sea el mismo del atributo, por ejemplo:
@@ -572,16 +572,30 @@ WAI-ARIA
 
 Para mejor accesibilidad para mecanismos de ayuda para usuarios con discapacidad visual, los desarrollos web deben tener implementado **WAI-ARIA**, el estándar recomendado por la W3C para tales propósitos. [El esqueleto se puede encontrar en Github](https://github.com/I2BTech/ariabones) el cual estará en constante actualización.
 
+Software
+=====
+
+para crear código frontend, en I2B utilizaremos 2 software los cuales la empresa dispondrá de licencias:
+
+- Mac OS X: [Sublime Text](http://www.sublimetext.com/)
+- Windows: [Sublime Text](http://www.sublimetext.com/) ó [Aptana](http://www.aptana.com/)
+
+###Complementos
+
+- [Emmet](http://emmet.io/)
+- [CSS Hat](https://csshat.com/)
+
+TODO
+
+
 Herramientas
 =====
 
 - [SCSS](http://sass-lang.com/)
 - [Jade](http://jade-lang.com/reference/)
-- [Emmet](http://emmet.io/)
-- [CSS Hat](https://csshat.com/)
 - [Normalize.css](http://necolas.github.io/normalize.css/)
 - [Handlebars](http://handlebarsjs.com/)
-- [Jeet Grid System](http://jeet.gs/)
+- <s>[Jeet Grid System](http://jeet.gs/)?</s>
 
 #####Contributor
 - [Jorge Epuñan](https://github.com/juanbrujo/)
@@ -589,3 +603,4 @@ Herramientas
 #####Changelog
 - first commit: 20150130
 - version 0.9: 20150225
+- version 0.91: 20150310
