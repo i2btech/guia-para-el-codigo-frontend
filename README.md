@@ -28,7 +28,10 @@ proyecto/
 |	|__ jade
 |	|	|__ page.jade
 |	|	|__ inc
-|	|		|__ mixins.jade
+|	|	|	|__ mixins.jade
+|	|	|	|__ variables.jade
+|	|	|__ template
+|	|		|__ variables.jade
 |	|
 |	|__ handlebars
 |	|	|__ template.handlebars
@@ -98,6 +101,33 @@ html(lang='es')
 
 		link(rel='stylesheet', href='css/main.min.css')
 ```
+
+###Encabezado
+- En todo archivo .jade que corresponda a un template de varias páginas se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto ó que esté realizando el template:
+
+``` html
+//
+ * Proyecto:
+ * Fecha Inicio:
+ * Email Desarrollador:
+ * Descripción: 
+ * Dependencias: 
+ * Dónde se utiliza: 
+```
+
+###Comentarios
+- Comenta grandes bloques de secciones de la siguiente manera (mayúsculas):
+
+``` css
+// SECCION
+```
+
+- Para comentarios menores, de orden local o para recordar o mencionar algo, con Jade utiliza `//-` ya que se emitirá al compilar a HTML:
+
+``` css
+//- cambio de color al :target
+```
+
     
 ###Encoding
 - Por defecto todos los documentos HTML utilizarán **UTF-8** como formato de encoding para renderizado estándar de caracteres.
@@ -210,6 +240,15 @@ selector {
 			}
 		}
 	}
+}
+```
+
+- Si defines estilos para más de un mismo selector, usa saltos de líneas:
+
+``` css
+selector1,
+selector2 {
+	propiedad: valor;
 }
 ```
 
@@ -349,7 +388,7 @@ JavaScript
 /* ===========
  * Proyecto:
  * Fecha Inicio:
- * Desarrollador:
+ * Email Desarrollador:
  * ======== */
 ```
 
