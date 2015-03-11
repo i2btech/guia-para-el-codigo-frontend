@@ -65,6 +65,7 @@ proyecto/
 		|		|__ selectivizr.min.js
 		|		|__ modernizr.min.js
 		|		|__ html5shiv.min.js
+		|		|__ respond.min.js
 		|		|__ anyexternallib.min.js
 		|
 		|__ images
@@ -176,6 +177,7 @@ TODO
 	* jQuery.js
 	* html5shiv.js
 	* selectivizr.js
+	* respond.js
 	* mixins básicos
 	* estructura de carpetas estándar
 
@@ -366,6 +368,11 @@ selector.clase {}
 
 ###Media Queries
 - Declara `@media` queries al final del archivo CSS, donde se definan modificaciones al comportamiento/estilo de elementos ya declarados.
+- En proyectos de gran volumen con participacio de más de un desarrollador frontend sobre el mismo, se recomienda utilizar diferentes hojas de estilos para cada @media y que cada uno trabaje sobre diferentes archivos bajo un mismo HTML compartiendo la estructura responsive:
+
+```html
+link(rel='stylesheet', media='screen and (min-width: 701px) and (max-width: 900px)', href='css/main.min.css')
+```
 
 ###Mixins
 
@@ -501,7 +508,7 @@ Imágenes
 =====
 
 - Los formatos de imágenes soportados para web en la actualidad son: **JPG**, **PNG** y **GIF**. **SVG** es soportado con *fallback* a **PNG**.
-- Toda imagen debe ser comprimida según sea el mejor método según el formato. Se recomienda aplicarlo desde GruntJS a través del plugin **grunt-image** el que soporta los siguientes métodos de compresión:
+- Toda imagen debe ser comprimida según sea el mejor método según el formato. Se recomienda aplicarlo desde GruntJS a través del plugin **grunt-contrib-imagemin** el que soporta los siguientes métodos de compresión:
 	- pngquant
    - optipng
    - advpng
@@ -615,7 +622,32 @@ Para mejor accesibilidad para mecanismos de ayuda para usuarios con discapacidad
 Deploy
 =====
 
-TODO
+Se adjunta el plugin de grunt *ftp-deploy* el que debe utilizarse cuando necesitas mover archivos de tu ambiente local a un servidor de pruebas a través del protocolo FTP. Se configura en Gruntfile.js la URL, puerto y el archivo donde se lee el u/p de acceso. Éstos se guardan en un archivo ftppass el que se adjunta, pero en tu directorio de trabajo debe guardarse como archivo oculto .ftppass. Además está pre-configurado los archivos y directorios que se excluyen, como Gruntfile.js, package.json, /src y /node_modules entre otros. Cuando necesites subir a productivo tus archivos, desactivas el watch de GruntJS (⌘+. ó ctrl+.) y envías todos tus archivos al servidor con el siguiente comando:
+
+	$ grunt ftp-deploy
+
+Respaldo local
+=====
+
+Se agrega un task a través del plugin **contrib-compress** el que comprime en .zip los siguientes archivos y directorios de trabajo:
+
+	src/**/*.*
+	dist/**/*.*
+	**.*
+	
+Exceptuando:
+
+	'!*.md',
+	'!node_modules/**.*',
+	'!bower_components/**.*',
+	'!.sass-cache'
+
+Para utilizarlo basta correr:
+
+	$ grunt backup
+
+Y todo .zip generado se guardará en el directorio `/backup` con la nomenclatura `nombreproyecto_YYYYMMDD-HHMMss.zip`.
+
 
 Software
 =====
@@ -627,10 +659,14 @@ para crear código frontend, en I2B utilizaremos 2 software los cuales la empres
 
 ###Complementos
 
-- [Emmet](http://emmet.io/)
-- [CSS Hat](https://csshat.com/)
+####Sublime Text packages
+- [Jade.tmbundle](https://packagecontrol.io/packages/Jade)
+- [Syntax Highlighting for Sass](https://packagecontrol.io/packages/Syntax%20Highlighting%20for%20Sass)
+- [Emmet](https://packagecontrol.io/packages/Emmet)
+- [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
 
-TODO
+####Complementos Photoshop
+- [CSS Hat](https://csshat.com/)
 
 
 Enlaces
@@ -640,7 +676,7 @@ Enlaces
 - [Jade](http://jade-lang.com/reference/)
 - [Normalize.css](http://necolas.github.io/normalize.css/)
 - [Handlebars](http://handlebarsjs.com/)
-- <s>[Jeet Grid System](http://jeet.gs/)?</s>
+- [Foundation](foundation.zurb.com)
 
 #####Contributor
 - [Jorge Epuñan](https://github.com/juanbrujo/)
