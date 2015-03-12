@@ -168,20 +168,49 @@ a.list-item.active(href='')
 
 TODO
 
-###HTML Boilerplate
+###Boilerplate & Workflow
 - Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto, entre ellos:
 
 	* GruntJS
 	* SCSS (CSS pre-processor)
 	* Jade (HTML pre-processor)
+	* mixins básicos
 	* jQuery.js
 	* html5shiv.js
 	* selectivizr.js
 	* respond.js
-	* mixins básicos
+	* CSS3 Pie
 	* estructura de carpetas estándar
 
-[HTML Boilerplate TODO >](#)
+El HTML generado contiene la siguiente estructura:
+
+```html
+<!DOCTYPE html(lang='es')>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title></title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <!--[if lt IE 8]>
+  <script src="assets/js/libs/html5shiv.js"></script>
+  <![endif]-->
+  <script src="assets/js/libs/modernizr-detectizr.js"></script>
+</head>
+<body>
+  ...
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src=assets/js/libs/jquery.js><\/script>');</script>
+  <!--[if lt IE 8]>
+  <script src="assets/js/libs/respond.js"></script>
+  <script src="assets/js/libs/selectivizr.js"></script>
+  <![endif]-->
+  <script src="assets/js/functions.js"></script>
+</body>
+```
+
+[I2B Frontend WorkFlow >](https://github.com/I2BTech/i2b-frontend-workflow)
 
 CSS
 =====
@@ -376,7 +405,25 @@ link(rel='stylesheet', media='screen and (min-width: 701px) and (max-width: 900p
 
 ###Mixins
 
-TODO
+Se incluye un archivo `src/scss/inc/mixins.scss` varios mixins y que se dividen en 2 grupos: los de prefix y el resto.
+
+####Prefix
+Ayudan al soporte de prefix de las propiedades CSS que aún las necesita para correcta visualización en browsers. Sin embargo, se debe privilegiar el uso del plugin **grunt-autoprefixer** el que está configurado para agregar prefijos (estándares) directo a los archivos CSS generados de SCSS dentro de `dist/assets/css` correspondientes a las últimas 2 versiones (la actual y una anterior) de los principales browsers y las versiones en específico de IE 8 y 9.
+
+Toma en cuenta que Microsoft creó filtros (no estádares) los que se toman en cuenta para algunos de los mixins aquí utilizados, como por ejemplo `opacity` y `background: linear-gradient();`.
+
+####El resto
+Los otros mixins se detallan a continuación:
+
+- **out($color:red)**: utilizado para debuguear, le agrega al selector un outline de 1px y de color a definir; rojo por defecto.
+
+- **escondetxt()**: esconde el texto con el clásico `text-indent: -9999px; overflow: hidden;`
+
+- **zero()**: básico y universal reseter con `margin:0; padding:0;`
+
+- **gradient-vertical($startColor,$endColor)**: gradientes verticales más fáciles, de arriba a abajo: 
+
+- **gradient-horizontal($startColor,$endColor)**: gradientes horizontales más fáciles, de izquierda a derecha:
 
 
 JavaScript
@@ -677,6 +724,8 @@ Enlaces
 - [Normalize.css](http://necolas.github.io/normalize.css/)
 - [Handlebars](http://handlebarsjs.com/)
 - [Foundation](foundation.zurb.com)
+- [Bootstrap](http://getbootstrap.com/)
+- [CSS3 Pie](http://css3pie.com/)
 
 #####Contributor
 - [Jorge Epuñan](https://github.com/juanbrujo/)
