@@ -564,7 +564,27 @@ URL's
 Imágenes
 =====
 
+- Privilegiar el uso de Icon Fonts por sobre imágenes (solicitarlas al diseñador antes de iniciar el proyecto).
+
+###Formatos
+
 - Los formatos de imágenes soportados para web en la actualidad son: **JPG**, **PNG** y **GIF**. **SVG** es soportado con *fallback* a **PNG**.
+- Nombres y formatos siempre deben ir en minúsculas.
+
+###Nomenclatura
+
+Se propone la siguiente nomenclatura de prefijos según sea el uso que tenga el tipo de imagen a ser utilizado:
+
+- **Iconos**: **ico-**nombreimagen.formato
+- **Botones**: **btn-**nombreimagen.formato
+- **Logos**: **logo-**nombreimagen.formato
+- **Banners**: **banner-**nombreimagen.formato
+- **Fondos**: **bg-**nombreimagen.formato
+
+Se recomienda que imágenes de tipo íconos, logos y botones estén dentro del directorio `src/images/sprites` para la generación de sprites a partir de éstas. Las otras pueden ir dentro de `src/images` para que sólo sean optimizadas por GruntJS.
+
+###Optimización
+
 - Toda imagen debe ser comprimida según sea el mejor método según el formato. Se recomienda aplicarlo desde GruntJS a través del plugin **grunt-contrib-imagemin** el que soporta los siguientes métodos de compresión:
 	- pngquant
    - optipng
@@ -749,3 +769,4 @@ Enlaces
 	- 	CSS: agregado Bootstrap como grilla estándar
 	-  JS: mejorado nomenclatura de variables y funciones
 	-  JS: agregado sugerencia de busqueda de elementos antes de atacharle eventos o funciones
+	-  Imagenes: agregado nomenclatura de imágenes
