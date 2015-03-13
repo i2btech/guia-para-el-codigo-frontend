@@ -402,6 +402,7 @@ selector.clase {}
 ```html
 link(rel='stylesheet', media='screen and (min-width: 701px) and (max-width: 900px)', href='css/main.min.css')
 ```
+- Para todo proyecto que requiera comportamiento responsive en su grilla, se recomienda el uso de la grilla de [Bootstrap](http://getbootstrap.com/customize/) (customizada) en su última versión disponible, la que permite soporte desde IE8 (mediante respond.js) y construcción de grillas responsive/adaptive.
 
 ###Mixins
 
@@ -470,17 +471,18 @@ JavaScript
 ```
 
 ### Nomenclaturas
+
 - Los archivos JavaScript creados deben tener su nombre en minúsculas, sin espacios ni caracteres especiales. Si el contenido del archivo corresponde a un plugin para jQuery, éste debe identificarse claramente como dependiente de tal librería y se permite el uso del nombre en minusculaMayuscula (*camelCase*), de la siguiente manera:
 
 ```
 jquery.nombrePlugin-version.min.js
 ```
 
-- Crea nombres de funciones, parámetros, métodos, variables y atributos que sean descriptivas al contexto y/o función que cumple el elemento. 
+- Crea nombres de funciones, parámetros, métodos, variables y atributos en inglés y que sean descriptivas al contexto y/o función que cumple el elemento. 
 
 ``` css
 // Bien
-function ventanaModal(){}
+function modalWindow(){}
 
 // Mal
 function cerrar(){}
@@ -489,9 +491,17 @@ function cerrar(){}
 - Todas las variables deben ser declaradas antes de ser utilizadas. Prefiere que cada variable sea declarada en una nueva línea y con su comentario inline. Si dependes directamente de jQuery, utiliza `$` antes del nombre de la variable:
 
 ``` javascript
-var $elemento, 	// this
+var $element, 	// this
 	 $indent,	// nivel de indentación
-	 $ancho;	// ancho del elemento sin el valor
+	 $width;	// ancho del elemento sin el valor
+```
+
+- Busca por la existencia del elemento siempre antes de agregar un evento o entregarle una función:
+
+``` javascript
+if( $element.length ){
+	...
+}
 ```
 
 - El uso de variables globales debe ser sólo si realmente necesarias. Si la declaras, utiliza MAYUSCULA en su nombre para identificarla claramente.
@@ -723,7 +733,7 @@ Enlaces
 - [Jade](http://jade-lang.com/reference/)
 - [Normalize.css](http://necolas.github.io/normalize.css/)
 - [Handlebars](http://handlebarsjs.com/)
-- [Foundation](foundation.zurb.com)
+- <s>[Foundation](foundation.zurb.com)</s>
 - [Bootstrap](http://getbootstrap.com/)
 - [CSS3 Pie](http://css3pie.com/)
 
@@ -734,3 +744,7 @@ Enlaces
 - first commit: 20150130
 - version 0.9: 20150225
 - version 0.91: 20150310
+- version 0.92: 20150313
+	- 	CSS: agregado Bootstrap como grilla estándar
+	-  JS: mejorado nomenclatura de variables y funciones
+	-  JS: agregado sugerencia de busqueda de elementos antes de atacharle eventos o funciones
