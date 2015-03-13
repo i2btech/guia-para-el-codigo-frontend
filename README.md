@@ -744,6 +744,7 @@ Enlaces
 - first commit: 20150130
 - version 0.9: 20150225
 - version 0.91: 20150310
+	- CSS: agregado normalize como estandar
 - version 0.92: 20150313
 	- 	CSS: agregado Bootstrap como grilla estándar
 	-  JS: mejorado nomenclatura de variables y funciones
