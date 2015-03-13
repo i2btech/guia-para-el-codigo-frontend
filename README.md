@@ -235,7 +235,7 @@ CSS
 ###Pre-processing
 - Utilizamos [SCSS](http://sass-lang.com/) como pre-processor para CSS, el que es la versión 3 de **SASS**.
 
-- Privilegia el uso de *mixins* y funciones, pero no abuses. Evita utilizar *@extend*.
+- Privilegia el uso de *mixins* y funciones, pero no abuses. Evita utilizar *@extend* ya que puede importar mucho código innecesario si mal utilizado.
 
 - No indentes más de 3 niveles de especificidad.
 
