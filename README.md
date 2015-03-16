@@ -560,11 +560,6 @@ URL's
 <script src="http://www.dominio.com
 ```
 
-Fuentes
-=====
-
-TO-DO
-
 Imágenes
 =====
 
@@ -623,6 +618,27 @@ Y un archivo `sprites.png` y `sprites.scss` serán automáticamente generados en
 		|__ images/sprites.png
 		
 ```
+
+
+Fuentes (Tipografías)
+=====
+
+- Se privilegiará el uso de tipografías del catálogo de [Google Fonts](http://www.google.com/fonts/) las que serán llamadas desde su CDN.
+- En el caso de necesitar tipografías customizadas ó Icon Fonts, éstas serán guardadas directamente en el directorio `dist/assets/fonts` ya que no forman parte del *workflow* de GruntJS.
+- Para webfonts locales, utilizar el siguiente orden de llamado de formatos:
+
+```
+@font-face {
+  font-family: 'WebFontName';
+  src: url('webfontname.eot'); /* IE9 Compat Modes */
+  src: url('webfontname.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfontname.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfontname.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfontname.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('webfontname.svg#svgWebFontName') format('svg'); /* Legacy iOS */
+}
+```
+
 
 Performance
 =====
@@ -763,14 +779,3 @@ Enlaces
 
 #####Contributor
 - [Jorge Epuñan](https://github.com/juanbrujo/)
-
-#####Changelog
-- first commit: 20150130
-- version 0.9: 20150225
-- version 0.91: 20150310
-	- CSS: agregado normalize como estandar
-- version 0.92: 20150313
-	- 	CSS: agregado Bootstrap como grilla estándar
-	-  JS: mejorado nomenclatura de variables y funciones
-	-  JS: agregado sugerencia de busqueda de elementos antes de atacharle eventos o funciones
-	-  Imagenes: agregado nomenclatura de imágenes

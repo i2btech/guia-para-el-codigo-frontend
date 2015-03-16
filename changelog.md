@@ -1,0 +1,11 @@
+##Changelog
+- first commit: 20150130
+- version 0.9: 20150225
+- version 0.91: 20150310
+	- CSS: agregado normalize como estandar
+- version 0.92: 20150313
+	- 	CSS: agregado Bootstrap como grilla estándar
+	-  JS: mejorado nomenclatura de variables y funciones
+	-  JS: agregado sugerencia de busqueda de elementos antes de atacharle eventos o funciones
+	-  Imagenes: agregado nomenclatura de imágenes
+- 20150316: completado tema `Fuentes / Tipografias`
