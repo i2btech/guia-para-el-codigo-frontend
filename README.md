@@ -169,7 +169,7 @@ a.list-item.active(href='')
 TODO
 
 ###Boilerplate & Workflow
-- Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto, entre ellos:
+- Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto y entregar soporte mínimo del browser IE8, entre ellos:
 
 	* GruntJS
 	* SCSS (CSS pre-processor)
@@ -274,7 +274,7 @@ selector {
 }
 ```
 
-- Si defines estilos para más de un mismo selector, usa saltos de líneas:
+- Si defines estilos para más de un mismo selector, usa saltos de líneas entre ellos:
 
 ``` css
 selector1,
@@ -625,6 +625,8 @@ Fuentes (Tipografías)
 
 - Se privilegiará el uso de tipografías del catálogo de [Google Fonts](http://www.google.com/fonts/) las que serán llamadas desde su CDN.
 - En el caso de necesitar tipografías customizadas ó Icon Fonts, éstas serán guardadas directamente en el directorio `dist/assets/fonts` ya que no forman parte del *workflow* de GruntJS.
+- Prefiere utilizar `px` como unidad para `font-size`, ya que ofrece control absoluto sobre el texto respecto al diseño esperado. 
+- Prefiere no utilizar unidades para dfinir `line-height` ya que no hereda el valor basado en el porcentaje, sino en su unidad multiplicadora según `font-size`.
 - Para webfonts locales, utilizar el siguiente orden de llamado de formatos:
 
 ```
