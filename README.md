@@ -624,6 +624,18 @@ Fuentes (Tipografías)
 =====
 
 - Se privilegiará el uso de tipografías del catálogo de [Google Fonts](http://www.google.com/fonts/) las que serán llamadas desde su CDN.
+- Incluye la tipografía desde Google Fonts a través de la etiqueta `<link>` y no mediante `@import`:
+
+```html
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+```
+
+- En el caso de necesitar más de una tipografía, concaténalas en un mismo llamado:
+
+```html
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family= Open+Sans|Droid+Sans">
+```
+
 - En el caso de necesitar tipografías customizadas ó Icon Fonts, éstas serán guardadas directamente en el directorio `dist/assets/fonts` ya que no forman parte del *workflow* de GruntJS.
 - Prefiere utilizar `px` como unidad para `font-size`, ya que ofrece control absoluto sobre el texto respecto al diseño esperado. 
 - Prefiere no utilizar unidades para dfinir `line-height` ya que no hereda el valor basado en el porcentaje, sino en su unidad multiplicadora según `font-size`.

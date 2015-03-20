@@ -7,5 +7,6 @@
 	- 	CSS: agregado Bootstrap como grilla estándar
 	-  JS: mejorado nomenclatura de variables y funciones
 	-  JS: agregado sugerencia de busqueda de elementos antes de atacharle eventos o funciones
-	-  Imagenes: agregado nomenclatura de imágenes
+	-  Imágenes: agregado nomenclatura de imágenes
 - 20150316: completado tema `Fuentes / Tipografias`
+- 20150320: especificado uso de Google Font en proyectos, tema `Fuentes / Tipografias`
