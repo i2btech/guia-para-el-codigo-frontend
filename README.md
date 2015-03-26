@@ -570,6 +570,10 @@ Imágenes
 - Los formatos de imágenes soportados para web en la actualidad son: **JPG**, **PNG** y **GIF**. **SVG** es soportado con *fallback* a **PNG**.
 - Nombres y formatos siempre deben ir en minúsculas.
 
+###Temporales
+
+- Para imágenes que se utilizarán sólo como maquetación y que no hacen parte del diseño final (banners, productos y toda imagen simulada) deben guardarse en el directorio `src/images/TEMP` para que no sean consideradas como parte de la plantilla final y puedan ser fácilmente borradas una vez en integradadas ó en producción.
+
 ###Nomenclatura
 
 Se propone la siguiente nomenclatura de prefijos según sea el uso que tenga el tipo de imagen a ser utilizado:
