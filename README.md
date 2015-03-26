@@ -180,6 +180,7 @@ TODO
 	* selectivizr.js
 	* respond.js
 	* CSS3 Pie
+	* Modernizr + Detectizr
 	* estructura de carpetas estándar
 
 El HTML generado contiene la siguiente estructura:
@@ -397,7 +398,7 @@ selector.clase {}
 
 ###Media Queries
 - Declara `@media` queries al final del archivo CSS, donde se definan modificaciones al comportamiento/estilo de elementos ya declarados.
-- En proyectos de gran volumen con participacio de más de un desarrollador frontend sobre el mismo, se recomienda utilizar diferentes hojas de estilos para cada @media y que cada uno trabaje sobre diferentes archivos bajo un mismo HTML compartiendo la estructura responsive:
+- En proyectos de gran volumen con participación de más de un desarrollador frontend sobre el mismo, se recomienda utilizar diferentes hojas de estilos para cada @media y que cada uno trabaje sobre diferentes archivos bajo un mismo HTML compartiendo la estructura responsive:
 
 ```html
 link(rel='stylesheet', media='screen and (min-width: 701px) and (max-width: 900px)', href='css/main.min.css')
@@ -542,7 +543,7 @@ for (i = 0; i < 10; i++) {
 
 ``` html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write(unescape('%3Cscript src="js/libs/jquery-1.11.1.min.js"%3E%3C/script%3E'))</script>
+<script>window.jQuery || document.write(unescape('%3Cscript src="assets/js/libs/jquery-1.11.1.min.js"%3E%3C/script%3E'))</script>
 ```
 
 URL's
@@ -642,7 +643,7 @@ Fuentes (Tipografías)
 
 - En el caso de necesitar tipografías customizadas ó Icon Fonts, éstas serán guardadas directamente en el directorio `dist/assets/fonts` ya que no forman parte del *workflow* de GruntJS.
 - Prefiere utilizar `px` como unidad para `font-size`, ya que ofrece control absoluto sobre el texto respecto al diseño esperado. 
-- Prefiere no utilizar unidades para dfinir `line-height` ya que no hereda el valor basado en el porcentaje, sino en su unidad multiplicadora según `font-size`.
+- Prefiere no utilizar unidades para definir `line-height` ya que no hereda el valor basado en el porcentaje, sino en su unidad multiplicadora según `font-size`.
 - Para webfonts locales, utilizar el siguiente orden de llamado de formatos:
 
 ```
@@ -782,6 +783,15 @@ para crear código frontend, en I2B utilizaremos 2 software los cuales la empres
 
 ####Complementos Photoshop
 - [CSS Hat](https://csshat.com/)
+
+
+Ambiente Local
+=====
+
+- El ambiente de desarrollo local debe correr en `http://localhost/` y contempla:
+	- Apache
+	- MySQL
+	- PHP
 
 
 Enlaces
