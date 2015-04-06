@@ -129,6 +129,14 @@ html(lang='es')
 //- cambio de color al :target
 ```
 
+###Compatibilidad IE
+- El modo **Edge** de Internet Explorer debe ser explícitamente declarado dentro de las etiquetas `<head></head>`:
+
+``` html
+head
+	meta(http-equiv='X-UA-Compatible' content='IE=Edge')
+	title ★★★☆☆
+```
     
 ###Encoding
 - Por defecto todos los documentos HTML utilizarán **UTF-8** como formato de encoding para renderizado estándar de caracteres.
@@ -157,6 +165,17 @@ p
 
 ``` css
 a.list-item.active(href='')
+```
+
+###Etiquetas con auto-cierre
+- En el caso de utilizar etiquetas HTML que se cierren a sí mismas (como en el caso de `<img />` deja un espacio al final antes del `/` cierre:
+
+``` html
+// Evita:
+<img src="chanfle.jpg"/>
+
+// Prefiere:
+<img src="chanfle.jpg" />
 ```
 
 ###Semántica y accesibilidad
@@ -427,6 +446,50 @@ Los otros mixins se detallan a continuación:
 
 - **gradient-horizontal($startColor,$endColor)**: gradientes horizontales más fáciles, de izquierda a derecha:
 
+###@extend e @include
+
+- Prefiere agrupar las declaraciones `@include` en la parte superior del bloque y luego de las declaraciones `@extend`:
+
+```scss
+.selector {
+	@extend .element;
+	@include clearfix();
+	
+	width: 5em;
+}
+```
+
+### Herencia de estilos
+
+- Cuidado con la herencia de contenido, para eso recuerda que puedes utilizar el selector de hijo directo `>`:
+
+```html
+<article class='article-link'>
+  <div class='box-vote'>
+    <button class='add'></button>
+    <button class='rest'></button>
+    <span class='count'></span>
+  </div>
+
+  <h3 class='title'>Article title</h3>
+  <p class='count'>3 votes</p>
+</article>
+```
+
+```scss
+.article-link {
+  > .title 	{ /* ... */ }
+  > .count 	{ /* ... (!!!) */ }
+}
+
+.box-vote {
+  .add 		{ /* ... */ }
+  .rest 	{ /* ... */ }
+  .count 	{ /* ... */ }
+}
+```
+
+En este caso si no definieras `.article-link > .count` este estilo lo habría heredado `.box-vote .count`.
 
 JavaScript
 =====
