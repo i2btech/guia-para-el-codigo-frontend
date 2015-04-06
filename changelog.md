@@ -11,3 +11,8 @@
 - 20150316: completado tema `Fuentes / Tipografias`
 - 20150320: especificado uso de Google Font en proyectos, tema `Fuentes / Tipografias`
 - 20150316: especificado uso de imágenes temporales en `src/images/TEMP`. Agregado *Ambiente Local* y correcciones menores de txt.
+- 20150406: agregados elementos de markup y scss
+	- agregado compat. IE=Edge
+	- definido auto-cierre de etiquetas
+	- especificado uso de @extend e @include
+ 
