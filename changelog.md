@@ -15,4 +15,4 @@
 	- agregado compat. IE=Edge
 	- definido auto-cierre de etiquetas
 	- especificado uso de @extend e @include
- 
+- 20150413: agregado uso de *favicons* para proyectos responsive

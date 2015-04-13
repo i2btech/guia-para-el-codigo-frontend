@@ -183,9 +183,55 @@ a.list-item.active(href='')
 
 - Para mayor y mejor accesibilidad se agregarán [roles ARIA](http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/) que le agregarán sentido a áreas específicas de cada página. Más detalles en sección [WAI-ARIA](#wai-aria).
 
+###Favicons
+- Para todo proyecto *responsive* se considerarán las siguientes etiquetas `<meta>` y tamaños para ícons/favicons:
+
+```html
+<!-- Para iPad con retina en iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/images/favicon-152.png">
+
+<!-- Para iPad con retina en iOS ≤ 6: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/favicon-144.png">
+
+<!-- Para iPhone con retina en iOS ≥ 7: -->
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/images/favicon-120.png">
+
+<!-- Para iPhone con retina en iOS ≤ 6: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/favicon-114.png">
+
+<!-- Para primera y segunda generación de iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/favicon-72.png">
+
+<!-- Para no-retina iPhone, iPod Touch, y Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="/assets/images/favicon-57.png">
+
+<!-- Fallback -->
+<link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+<!-- IE10 Metro icon (cambiar color #FFFFFF) -->
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/path/to/favicon-144.png">
+```
+
+Y en *.jade*:
+
+```jade
+link(rel='apple-touch-icon-precomposed', sizes='152x152', href='/assets/images/favicon-152.png')
+link(rel='apple-touch-icon-precomposed', sizes='144x144', href='/assets/images/favicon-144.png')
+link(rel='apple-touch-icon-precomposed', sizes='120x120', href='/assets/images/favicon-120.png')
+link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/assets/images/favicon-114.png')
+link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/assets/images/favicon-72.png')
+link(rel='apple-touch-icon-precomposed', href='/assets/images/favicon-57.png')
+link(rel='icon', href='/assets/images/favicon-32.png', sizes='32x32')
+link(rel='icon', type='image/x-icon', href='/assets/images/favicon.ico')
+meta(name='msapplication-TileColor', content='#FFFFFF')
+meta(name='msapplication-TileImage', content='/path/to/favicon-144.png')
+```
+
 ###Template System
 
-TODO
+TODO: Handlebars
 
 ###Boilerplate & Workflow
 - Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto y entregar soporte mínimo del browser IE8, entre ellos:
