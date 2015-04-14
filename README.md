@@ -229,6 +229,60 @@ meta(name='msapplication-TileColor', content='#FFFFFF')
 meta(name='msapplication-TileImage', content='/path/to/favicon-144.png')
 ```
 
+###Social Meta / Opengraph
+- Para mejor indexación por sistemas de redes sociales, y en los proyectos que lo ameritan, se debe integrar las etiquetas `<meta>` correspondientes a [Opengraph](https://developers.facebook.com/docs/reference/opengraph/object-type/product/) y [Twitter Cards](https://dev.twitter.com/cards/types/product) y orientadas a *e-commerce* como se muestran a continuación:
+
+```html 
+<!-- Twitter Cards -->
+<meta name="twitter:site" content="@TWITTER_USERNAME" />
+<meta name="twitter:creator" content="@TWITTER_USERNAME" />
+<meta name="twitter:card" content="product" />
+<meta name="twitter:label1" content="price" />
+<meta name="twitter:data1" content="$PRECIO" />
+<meta name="twitter:label2" content="brand" />
+<meta name="twitter:data2" content="MARCA" />
+<meta name="twitter:image" content="http://URL_IMAGEN_500X500PX">
+<!-- OpenGraph -->
+<meta property="og:site_name" content="NOMBRE_SITIO" />
+<meta property="og:url" content="http://URL_SITIO/PRODUCTO" />
+<meta property="og:title" content="TITULO_PRODUCTO" />
+<meta property="og:description" content="DESCRIPCION_MAX_180_ARACTERES" />
+<meta property="og:image" content="http://URL_IMAGEN_500X500PX" />
+<meta property="og:type" content="product" />
+<meta property="og:price:amount" content="PRECIO" />
+<meta property="og:price:currency" content="MONEDA" />
+<meta property="og:availability" content="DISPONIBILIDAD('instock','oos','pending)" />
+<meta property="fb:app_id"  content="ID_APP_FB" /> 
+```
+Y en *.jade*:
+
+```jade
+// Twitter Cards
+meta(name='twitter:site', content='@TWITTER_USERNAME')
+meta(name='twitter:creator', content='@TWITTER_USERNAME')
+meta(name='twitter:card', content='product')
+meta(name='twitter:label1', content='price')
+meta(name='twitter:data1', content='$PRECIO')
+meta(name='twitter:label2', content='brand')
+meta(name='twitter:data2', content='MARCA')
+meta(name='twitter:image', content='http://URL_IMAGEN_500X500PX')
+// OpenGraph
+meta(property='og:site_name', content='NOMBRE_SITIO')
+meta(property='og:url', content='http://URL_SITIO/PRODUCTO')
+meta(property='og:title', content='TITULO_PRODUCTO')
+meta(property='og:description', content='DESCRIPCION_MAX_180_ARACTERES')
+meta(property='og:image', content='http://URL_IMAGEN_500X500PX')
+meta(property='og:type', content='product')
+meta(property='og:price:amount', content='PRECIO')
+meta(property='og:price:currency', content='MONEDA')
+meta(property='og:availability', content="DISPONIBILIDAD('instock','oos','pending)")
+meta(property='fb:app_id', content='ID_APP_FB')
+```
+
+Links:
+- [Validador Twitter Cards](https://cards-dev.twitter.com/validator)
+- [Facebook Debugger](https://developers.facebook.com/tools/debug/)
+
 ###Template System
 
 TODO: Handlebars
