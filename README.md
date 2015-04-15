@@ -559,7 +559,7 @@ Los otros mixins se detallan a continuación:
 }
 ```
 
-### Herencia de estilos
+###Herencia de estilos
 
 - Cuidado con la herencia de contenido, para eso recuerda que puedes utilizar el selector de hijo directo `>`:
 
@@ -600,7 +600,7 @@ JavaScript
 	- HTML5Shiv
 	- Google Analytics
 
-### Encabezado
+###Encabezado
 - En todo archivo JavaScript se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto:
 
 ``` javascript
@@ -611,11 +611,11 @@ JavaScript
  * ======== */
 ```
 
-### Sintaxis
+###Sintaxis
 - Utiliza 2 espacios (*soft tab*) / 1 tab (*hard tab*) para indentar.
 - Usa doble comilla `"` (*double quote*) para abrir y cerrar atributos, propiedades, valores, etc.
 
-### Comentarios
+###Comentarios
 - Para cada nueva función, utiliza el siguiente bloque de comentario como formato base para documentar:
 
 ``` javascript
@@ -634,7 +634,7 @@ JavaScript
  */
 ```
 
-### Nomenclaturas
+###Nomenclaturas
 
 - Los archivos JavaScript creados deben tener su nombre en minúsculas, sin espacios ni caracteres especiales. Si el contenido del archivo corresponde a un plugin para jQuery, éste debe identificarse claramente como dependiente de tal librería y se permite el uso del nombre en minusculaMayuscula (*camelCase*), de la siguiente manera:
 
@@ -698,7 +698,7 @@ for (i = 0; i < 10; i++) {
 }
 ```
 
-### Librerías
+###Librerías
 
 - Para mejor retro-compatibilidad y mayor rapidez en el desarrollo, en I2B utilizamos [jQuery](http://www.jquery.com/) como librería JavaScript por defecto. Prefiere el branch 1.1x que continúa con soporte a IE7+.
 
@@ -893,39 +893,12 @@ Y su implementación en una caja de producto, mediante código HTML (a modo de e
 </div>
 ```
 
+
 WAI-ARIA
 =====
 
 Para mejor accesibilidad para mecanismos de ayuda para usuarios con discapacidad visual, los desarrollos web deben tener implementado **WAI-ARIA**, el estándar recomendado por la W3C para tales propósitos. [El esqueleto se puede encontrar en Github](https://github.com/I2BTech/ariabones) el cual estará en constante actualización.
 
-Deploy
-=====
-
-Se adjunta el plugin de grunt *ftp-deploy* el que debe utilizarse cuando necesitas mover archivos de tu ambiente local a un servidor de pruebas a través del protocolo FTP. Se configura en Gruntfile.js la URL, puerto y el archivo donde se lee el u/p de acceso. Éstos se guardan en un archivo ftppass el que se adjunta, pero en tu directorio de trabajo debe guardarse como archivo oculto .ftppass. Además está pre-configurado los archivos y directorios que se excluyen, como Gruntfile.js, package.json, /src y /node_modules entre otros. Cuando necesites subir a productivo tus archivos, desactivas el watch de GruntJS (⌘+. ó ctrl+.) y envías todos tus archivos al servidor con el siguiente comando:
-
-	$ grunt ftp-deploy
-
-Respaldo local
-=====
-
-Se agrega un task a través del plugin **contrib-compress** el que comprime en .zip los siguientes archivos y directorios de trabajo:
-
-	src/**/*.*
-	dist/**/*.*
-	**.*
-	
-Exceptuando:
-
-	'!*.md',
-	'!node_modules/**.*',
-	'!bower_components/**.*',
-	'!.sass-cache'
-
-Para utilizarlo basta correr:
-
-	$ grunt backup
-
-Y todo .zip generado se guardará en el directorio `/backup` con la nomenclatura `nombreproyecto_YYYYMMDD-HHMMss.zip`.
 
 
 Software
