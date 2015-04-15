@@ -104,10 +104,10 @@ html(lang='es')
 ```
 
 ###Encabezado
-- En todo archivo .jade que corresponda a un template de varias páginas se colocará dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario, el cual deberá ser llenado por el desarrollador a cargo del proyecto ó que esté realizando el template:
+- En todo archivo .jade que corresponda a un template de una o varias varias páginas se incluirá dentro de las primeras líneas del mismo el siguiente encabezado a modo de comentario oculto, el cual deberá ser llenado por el desarrollador a cargo del proyecto ó que esté realizando el template:
 
 ``` html
-//
+//-
  * Proyecto:
  * Fecha Inicio:
  * Email Desarrollador:
