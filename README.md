@@ -147,7 +147,7 @@ head
 	title ★★★☆☆
 ```
 	  
-###Atributos
+###Etiquetas inline
 - Al utilizar *Jade* y de ser necesario colocar texto dentro de etiquetas, comúnmente se utizan barras `|` (*pipes*) para separar texto plano de etiquetas inline anidadas (como *strong* ó *em*). En lo posible evitar el uso de estas barras colocando el texto seguido de la etiqueta bloque que la contenga y utilizando HTML para etiquetas inline, como en el siguiente ejemplo:
 
 ``` css
@@ -361,7 +361,7 @@ CSS
 
 - Guarda valores repetitivos en variables con nomenclatura clara. Recuerda que puedes crear *scope* para la misma variable.
 
-- Agrega un salto de línea vacío antes de comenzar un nuevo elementos o declaración de elementos para mantener legibilidad en el código fuente.
+- Agrega un salto de línea vacío antes de comenzar un nuevo elemento o declaración de elementos para mantener legibilidad en el código fuente.
 
 ``` css
 selector {
@@ -517,7 +517,7 @@ selector.clase {}
 
 ###Media Queries
 - Declara `@media` queries al final del archivo CSS, donde se definan modificaciones al comportamiento/estilo de elementos ya declarados.
-- En proyectos de gran volumen con participación de más de un desarrollador frontend sobre el mismo, se recomienda utilizar diferentes hojas de estilos para cada @media y que cada uno trabaje sobre diferentes archivos bajo un mismo HTML compartiendo la estructura responsive:
+- En proyectos de gran volumen con participación de más de un desarrollador frontend sobre el mismo, se recomienda utilizar diferentes hojas de estilos para cada `@media` y que cada uno trabaje sobre diferentes archivos bajo un mismo HTML compartiendo la estructura responsive:
 
 ```html
 link(rel='stylesheet', media='screen and (min-width: 701px) and (max-width: 900px)', href='css/main.min.css')
@@ -700,7 +700,7 @@ for (i = 0; i < 10; i++) {
 
 ###Librerías
 
-- Para mejor retro-compatibilidad y mayor rapidez en el desarrollo, en I2B utilizamos [jQuery](http://www.jquery.com/) como librería JavaScript por defecto. Prefiere el branch 1.1x que continúa con soporte a IE7+.
+- Para mejor retro-compatibilidad y mayor rapidez en el desarrollo, en **I2B** utilizamos [jQuery](http://www.jquery.com/) como librería JavaScript por defecto. Prefiere el branch 1.1x que continúa con soporte a IE7+.
 
 - Llama jQuery primero desde un **CDN** y seguido la copia local, como en el siguiente ejemplo:
 
@@ -754,16 +754,16 @@ Se recomienda que imágenes de tipo íconos, logos y botones estén dentro del d
 
 - Toda imagen debe ser comprimida según sea el mejor método según el formato. Se recomienda aplicarlo desde GruntJS a través del plugin **grunt-contrib-imagemin** el que soporta los siguientes métodos de compresión:
 	- pngquant
-   - optipng
-   - advpng
-   - zopflipng
-   - pngcrush
-   - pngout
-   - mozjpeg
-   - jpegRecompress
-   - jpegoptim
-   - gifsicle
-   - svgo
+	- optipng
+	- advpng
+	- zopflipng
+	- pngcrush
+	- pngout
+	- mozjpeg
+	- jpegRecompress
+	- jpegoptim
+	- gifsicle
+	- svgo
 - Se debe priorizar el uso de sprites para todo tipo de imágenes que sean linkeadas a través de hojas de estilos CSS como íconos, logos. La única excepción son imágenes de fondo que funcionen como un patrón. Para la generación automática de sprites se deben guardar en `src/images/sprites`:
 
 ```
@@ -801,7 +801,7 @@ Fuentes (Tipografías)
 - En el caso de necesitar más de una tipografía, concaténalas en un mismo llamado:
 
 ```html
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family= Open+Sans|Droid+Sans">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Droid+Sans">
 ```
 
 - En el caso de necesitar tipografías customizadas ó Icon Fonts, éstas serán guardadas directamente en el directorio `dist/assets/fonts` ya que no forman parte del *workflow* de GruntJS.
@@ -866,7 +866,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 ###Schema
 
-SEO es una parte esencial del marketing online y la correcta implementación de Schema en la estrategia es un fuerte apoyo. Los datos estructurados agregan información semántica al contenido y a las páginas que no son simples de interpretar y ayudan a que sean catalogados con más exactitud. Los principales atributos que se utilizan en sitios enfocados al comercio electrónico de productos (retail) son:
+SEO es una parte esencial del marketing online y la correcta implementación de [Schema](https://schema.org/docs/documents.html) en la estrategia es un fuerte apoyo. Los datos estructurados agregan información semántica al contenido y a las páginas que no son simples de interpretar y ayudan a que sean catalogados con más exactitud. Los principales atributos que se utilizan en sitios enfocados al comercio electrónico de productos (retail) son:
 
 - Product rating
 - brands model
@@ -940,6 +940,7 @@ Enlaces
 - <s>[Foundation](foundation.zurb.com)</s>
 - [Bootstrap](http://getbootstrap.com/)
 - [CSS3 Pie](http://css3pie.com/)
+- [Schema](https://schema.org/docs/documents.html)
 
 #####Contributor
 - [Jorge Epuñan](https://github.com/juanbrujo/)
