@@ -183,6 +183,21 @@ a.list-item.active(href='')
 
 - Para mayor y mejor accesibilidad se agregarán [roles ARIA](http://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/) que le agregarán sentido a áreas específicas de cada página. Más detalles en sección [WAI-ARIA](#wai-aria).
 
+###Atributos de input accesibles
+- Para ayudar la accesibilidad en dispositivos móviles, se recomienda el uso del atributo `type` para la etiqueta `<input />` con valores orientados al uso del valor de esta etiqueta, según el listado a continuación:
+	- search
+	- email
+	- url
+	- tel
+	- number
+	- range
+	- date
+	- month
+	- week
+	- time
+	- datetime
+	- color
+
 ###Favicons
 - Para todo proyecto *responsive* se considerarán las siguientes etiquetas `<meta>` y tamaños para ícons/favicons:
 

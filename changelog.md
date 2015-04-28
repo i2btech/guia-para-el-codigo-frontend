@@ -17,3 +17,4 @@
 	- especificado uso de @extend e @include
 - 20150413: agregado uso de *favicons* para proyectos responsive
 - 20150414: agregado uso de *OpenGraph* y *Twitter Cards* para proyectos e-commerce
+- 20150428: agregado uso de atributos accesibles para input
