@@ -810,13 +810,13 @@ Fuentes (Tipografías)
 - Incluye la tipografía desde Google Fonts a través de la etiqueta `<link>` y no mediante `@import`:
 
 ```html
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
 ```
 
 - En el caso de necesitar más de una tipografía, concaténalas en un mismo llamado:
 
 ```html
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Droid+Sans">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans|Droid+Sans">
 ```
 
 - En el caso de necesitar tipografías customizadas ó Icon Fonts, éstas serán guardadas directamente en el directorio `dist/assets/fonts` ya que no forman parte del *workflow* de GruntJS.
@@ -907,6 +907,9 @@ Y su implementación en una caja de producto, mediante código HTML (a modo de e
   </div>
 </div>
 ```
+[Structured Data Testing Tool | Google](https://developers.google.com/structured-data/testing-tool/)
+
+[Structured data validator | Yandex](https://webmaster.yandex.com/microtest.xml)
 
 
 WAI-ARIA
@@ -952,9 +955,7 @@ Enlaces
 - [Jade](http://jade-lang.com/reference/)
 - [Normalize.css](http://necolas.github.io/normalize.css/)
 - [Handlebars](http://handlebarsjs.com/)
-- <s>[Foundation](foundation.zurb.com)</s>
 - [Bootstrap](http://getbootstrap.com/)
-- [CSS3 Pie](http://css3pie.com/)
 - [Schema](https://schema.org/docs/documents.html)
 
 #####Contributor
