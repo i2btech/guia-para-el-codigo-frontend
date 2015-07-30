@@ -678,12 +678,20 @@ var $element, 	// this
 - Busca por la existencia del elemento siempre antes de agregar un evento o entregarle una función:
 
 ``` javascript
-if( $element.length ){
+if ( $element.length ){
 	...
 }
 ```
 
 - El uso de variables globales debe ser sólo si realmente necesarias. Si la declaras, utiliza MAYUSCULA en su nombre para identificarla claramente.
+
+- Funciones deben ser declaradas en camelCase sin espacio, como en el siguiente ejemplo:
+
+``` javascript
+function newFuction() {
+	...
+}
+```
 
 - if/else, switch, for, try, catch deben responder al siguiente formato de espaciado para mejor lectura y ordenamiento:
 
