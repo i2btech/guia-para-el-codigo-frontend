@@ -21,3 +21,4 @@
 - 20150626: 
 	- agregado URL's de validación para schema.
 	- corrección de texto menores. 
+- 20150730: corregido nomenclatura funciones JS
