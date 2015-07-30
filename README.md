@@ -657,14 +657,14 @@ JavaScript
 jquery.nombrePlugin-version.min.js
 ```
 
-- Crea nombres de funciones, parámetros, métodos, variables y atributos en inglés y que sean descriptivas al contexto y/o función que cumple el elemento. 
+- Crea nombres de funciones, parámetros, métodos, variables y atributos en inglés, descriptivas al contexto y/o función que cumple el elemento, camelCased y sin espacio después del nombre y con espacio antes del *bracket* `{`. 
 
 ``` css
 // Bien
-function modalWindow(){}
+function modalWindow() {}
 
 // Mal
-function cerrar(){}
+function cerrar() {}
 ```
 
 - Todas las variables deben ser declaradas antes de ser utilizadas. Prefiere que cada variable sea declarada en una nueva línea y con su comentario inline. Si dependes directamente de jQuery, utiliza `$` antes del nombre de la variable:
@@ -684,14 +684,6 @@ if ( $element.length ){
 ```
 
 - El uso de variables globales debe ser sólo si realmente necesarias. Si la declaras, utiliza MAYUSCULA en su nombre para identificarla claramente.
-
-- Funciones deben ser declaradas en camelCase sin espacio, como en el siguiente ejemplo:
-
-``` javascript
-function newFuction() {
-	...
-}
-```
 
 - if/else, switch, for, try, catch deben responder al siguiente formato de espaciado para mejor lectura y ordenamiento:
 
