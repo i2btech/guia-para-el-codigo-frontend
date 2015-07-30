@@ -664,7 +664,7 @@ jquery.nombrePlugin-version.min.js
 function modalWindow() {}
 
 // Mal
-function cerrar() {}
+function cerrar () {}
 ```
 
 - Todas las variables deben ser declaradas antes de ser utilizadas. Prefiere que cada variable sea declarada en una nueva línea y con su comentario inline. Si dependes directamente de jQuery, utiliza `$` antes del nombre de la variable:
