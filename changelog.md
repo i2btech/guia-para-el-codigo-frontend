@@ -22,3 +22,6 @@
 	- agregado URL's de validación para schema.
 	- corrección de texto menores. 
 - 20150730: corregido nomenclatura funciones JS
+- 20150818: corregido pequeños errores de texto y:
+	- removido handlebars de la documentacion.
+	- mergeado scripts lt IE8- en lt-ie9.js
