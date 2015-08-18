@@ -31,15 +31,12 @@ proyecto/
 |	|	|	|__ mixins.jade
 |	|	|	|__ variables.jade
 |	|	|__ template
-|	|		|__ variables.jade
-|	|
-|	|__ handlebars
-|	|	|__ template.handlebars
-|	|	|__ inc
-|	|		|__ data.json
+|	|		|__ templatename.jade
 |	|
 |	|__ js
 |	|	|__ functions.js
+|	|	|__ inc
+|	|		|__ anyexternallib.js
 |	|
 |	|__images
 |		|__ sprites
@@ -47,9 +44,10 @@ proyecto/
 |__ gruntfile.js
 |__ package.json
 |__ bower.json
-|__ .editorconfig
+|__ .editorconfig	
+|__ .gitignore
+|__ .htmlhintrc
 |__ .jshintrc
-|__ .ftppass
 |
 |__ dist
 	|__ page.html
@@ -61,11 +59,9 @@ proyecto/
 		|__ js
 		|	|__ functions.min.js
 		|	|__ libs
-		|		|__ jquery-1.11.1.min.js
-		|		|__ selectivizr.min.js
-		|		|__ modernizr.min.js
-		|		|__ html5shiv.min.js
-		|		|__ respond.min.js
+		|		|__ jquery-1.11.3.min.js
+		|		|__ modernizr-detectizr.min.js
+		|		|__ lt-ie-9.min.js
 		|		|__ anyexternallib.min.js
 		|
 		|__ images
@@ -298,9 +294,6 @@ Links:
 - [Validador Twitter Cards](https://cards-dev.twitter.com/validator)
 - [Facebook Debugger](https://developers.facebook.com/tools/debug/)
 
-###Template System
-
-TODO: Handlebars
 
 ###Boilerplate & Workflow
 - Como base para todos los nuevos proyectos web en I2B, se propone el uso de un boilerplate que contiene los elementos mínimos necesarios para iniciar el templating de cualquier proyecto y entregar soporte mínimo del browser IE8, entre ellos:
@@ -310,9 +303,7 @@ TODO: Handlebars
 	* Jade (HTML pre-processor)
 	* mixins básicos
 	* jQuery.js
-	* html5shiv.js
-	* selectivizr.js
-	* respond.js
+	* lt-ie9.js (selectivizr.js + html5shiv.js + respond.js)
 	* CSS3 Pie
 	* Modernizr + Detectizr
 	* estructura de carpetas estándar
@@ -954,7 +945,6 @@ Enlaces
 - [SCSS](http://sass-lang.com/)
 - [Jade](http://jade-lang.com/reference/)
 - [Normalize.css](http://necolas.github.io/normalize.css/)
-- [Handlebars](http://handlebarsjs.com/)
 - [Bootstrap](http://getbootstrap.com/)
 - [Schema](https://schema.org/docs/documents.html)
 
