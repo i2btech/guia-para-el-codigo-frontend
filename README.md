@@ -567,7 +567,7 @@ Los otros mixins se detallan a continuación:
 
 ###Herencia de estilos
 
-- Cuidado con la herencia de contenido, para eso recuerda que puedes utilizar el selector de hijo directo `>`:
+- Cuida la herencia de estilos y evita el selector de hijo directo `>` y utilízalo sólo si necesario (por ejemplo, cuando quieres alcanzar varios selectores hijos que no necesitan tener una clase declarada):
 
 ```html
 <article class='article-link'>
@@ -583,15 +583,9 @@ Los otros mixins se detallan a continuación:
 ```
 
 ```scss
-.article-link {
-  > .title 	{ /* ... */ }
-  > .count 	{ /* ... (!!!) */ }
-}
-
-.box-vote {
-  .add 		{ /* ... */ }
-  .rest 	{ /* ... */ }
-  .count 	{ /* ... */ }
+. article-link {
+  .title 	{ /* ... */ }
+  > .count { /* ... */ }
 }
 ```
 
@@ -648,11 +642,11 @@ JavaScript
 jquery.nombrePlugin-version.min.js
 ```
 
-- Crea nombres de funciones, parámetros, métodos, variables y atributos en inglés, descriptivas al contexto y/o función que cumple el elemento, camelCased y sin espacio después del nombre y con espacio antes del *bracket* `{`. 
+- Crea nombres de funciones, parámetros, métodos, variables y atributos en inglés, descriptivas al contexto y/o función que cumple el elemento, *camelCased* y sin espacio después del nombre y con espacio antes del *bracket* `{`. 
 
 ``` css
 // Bien
-function modalWindow() {}
+function openModalWindow() {}
 
 // Mal
 function cerrar () {}
@@ -826,12 +820,6 @@ Fuentes (Tipografías)
        url('webfontname.svg#svgWebFontName') format('svg'); /* Legacy iOS */
 }
 ```
-
-
-Performance
-=====
-
-TODO
 
 
 SEO/Métricas
