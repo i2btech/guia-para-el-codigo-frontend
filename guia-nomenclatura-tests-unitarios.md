@@ -9,15 +9,16 @@ Se apoya en la [Guía para el Código Frontend](README.md) y en [MutableCSS](mut
 
 **Patrón base:** 
 
-Para todo componente (funcionalidad individual y que contiene un conjunto de elementos):
+Para todo [componente](mutable-css.md#componentes) (funcionalidad individual y que contiene un conjunto de elementos):
 - lowerCamelCased
 - en inglés
 - la primera palabra en minúscula y singular y representa la función del componente
 - la segunda palabra `Box`
+- Componentes que son muy amplios no necesariamente tendrá sus subcomponentes o elementos marcados, por ej. *página de productos* y *opciones de los filtros de productos*. Bastará con marcas el componente principal (están marcados en este documento con un 👓).
 
 Ej: `loginBox`, `registerBox`, `cartBox`, `filterBox`
 
-Para todo elemento (elementos indivisibles que tienen función específica dentro de su componente):
+Para todo [elemento](mutable-css.md#elementos) (elementos indivisibles que tienen función específica dentro de su componente):
 - lowercase
 - en inglés
 - sin espacios
@@ -86,7 +87,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![searchBox](images/searchBox.png)
 
-## Paginador
+## Paginador 👓
 ```
 #paginationBox
 ```
@@ -106,29 +107,27 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ### Precio
 ```
-#filterPriceBox
-    #pricemininput
-    #pricemaxinput
+#filterPriceBox 👓
 ```
 
-### Marca
+### Marca 👓
 ```
 #filterBrandBox
 ```
 
-### Color
+### Color 👓
 ```
 #filterColorBox
 ```
 
-### Cantidad Productos 
+### Cantidad Productos 👓
 ```
 #productsquantityselect
 ```
 
 ![productsQuantitySelect](images/productsQuantitySelect.png)
 
-### Ordenamiento Productos
+### Ordenamiento Productos 👓
 ```
 #productsorderselect
 ```
@@ -139,7 +138,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 Para todo contenedor individual de producto, se tomará como sufijo identificador único a la nomenclatura el [SKU] del producto (UPPERCASED).
 
-### Resumen de producto
+### Resumen de producto 👓
 
 Para toda página que contenga una lista de productos, el formato debe contemplar el siguiente patrón de componente:
 
@@ -178,7 +177,7 @@ Para toda página que contenga una lista de productos, el formato debe contempla
 
 ![shippingCheckoutBox](images/shippingCheckoutBox.png)
 
-### Resumen de compra
+### Resumen de compra 👓
 
 ```
 #checkoutResumeBox
@@ -199,13 +198,13 @@ Para toda página que contenga una lista de productos, el formato debe contempla
 	#paymentcancelbutton
 ```
 
-### Compra exitosa
+### Compra exitosa 👓
 
 ```
 #paymentSuccessBox
 ```
 
-### Compra rechazada
+### Compra rechazada 👓
 
 ```
 #paymentRejectBox
