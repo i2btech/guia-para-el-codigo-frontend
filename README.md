@@ -521,6 +521,8 @@ selector.clase {}
 .rojo {}
 ```
 
+Evita el uso de ID's, salvo para el marcado necesario para tests unitarios (Selenium y otros). Para ello consulta la [guía de nomenclatura para tests unitarios](guia-nomenclatura-tests-unitarios.md).
+
 ###Media Queries
 - Declara `@media` queries al final del archivo CSS, donde se definan modificaciones al comportamiento/estilo de elementos ya declarados.
 - En proyectos de gran volumen con participación de más de un desarrollador frontend sobre el mismo, se recomienda utilizar diferentes hojas de estilos para cada `@media` y que cada uno trabaje sobre diferentes archivos bajo un mismo HTML compartiendo la estructura responsive:

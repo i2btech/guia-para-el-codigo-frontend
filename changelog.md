@@ -25,3 +25,5 @@
 - 20150818: corregido pequeños errores de texto y:
 	- removido handlebars de la documentacion.
 	- mergeado scripts lt IE8- en lt-ie9.js
+- 20151127:
+	- agregado *guia-nomenclatura-tests-unitarios.md*
