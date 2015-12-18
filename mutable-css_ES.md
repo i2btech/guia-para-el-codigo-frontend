@@ -9,7 +9,9 @@ Mutable CSS
 - Define **regiones**, zonas reutilizables que compondrán tu layout: `section, nav, aside, article, main, header, footer` y decláralas con ID's semánticos en el HTML. 
 - Crea **componentes** modulares y nómbralos con 2 palabras separadas por un guión (`-`): `.screenshot-image`.
 - Components contienen **elementos**, nómbralos con 1 palabra: `.title`.
-- Componentes y elementos tienen **mutables**, variaciones que se declaran un guión (`-`) como prefijo y de 2 tipos: variaciones de *diseño*: `-large`, `-small` de *estado*: `-disabled`, `-active`.
+- Componentes y elementos tienen **mutables**, variaciones que se declaran un guión (`-`) como prefijo y de 2 tipos: 
+	- variaciones de *diseño*: `-large`, `-small` 
+	- variaciones de *estado*: `-disabled`, `-active`
 - Componentes y elementos pueden ser heredados y no deben tener propiedades de posicionamiento y tamaño; defíneselos en su contexto y apóyate de las regiones.
 
 
@@ -20,7 +22,7 @@ Todo layout se compone de regiones globales, las cuales se definen según el [se
 
 ![Regiones](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/regiones.png)
 
-Ejemplos de regiones comúnes se listan a continuación:
+Ejemplos de regiones comunes se listan a continuación:
 
 - `#header`
 - `#content`
@@ -56,6 +58,11 @@ Se permite anidar componentes si se requiere:
 	<p class='meta'>...</p>
 </div>
 ```
+
+#### Componentes comunes
+
+Se ha definido un [listado de componentes comunes](componentes-comunes_ES.md) para proyectos de e-commerce los cuales se entregan de antemano con la nomenclatura necesaria. Se solicita respetar esta lista, la que estará en constante actualización cada vez que sea necesario mejorarlas.
+
 
 Elementos
 ---------------
@@ -116,7 +123,7 @@ Componentes y Elementos son mutables ya que pueden tener variaciones de estilos 
 	&.-sm { }
 }
 
-.button{
+.button {
 
 	&.-disabled { }
 }
@@ -154,7 +161,7 @@ Son los que cambian el estado de un elemento ó componente y los comunes son:
 <input class="button-send -disabled" />
 ```
 
-Se permiten tener varios mutables por componente/elemento:
+Se permite tener varios mutables por componente/elemento:
 
 ```html
 <input class="button-send -wide -disabled" />
@@ -201,9 +208,9 @@ Y utiliza las clases que la grilla te entrega.
   /* ... */
   
   // ELEMENTOS
-  > .image 	{ /* ... */ }
-  > .title 	{ /* ... */ }
-  > .meta 	{ /* ... */ }
+  .image 	{ /* ... */ }
+  .title 	{ /* ... */ }
+  .meta 	{ /* ... */ }
 }
 ```
 

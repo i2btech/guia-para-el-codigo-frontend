@@ -1,30 +1,31 @@
-Guía de nomenclatura para tests unitarios
+Naming conventions for unit tests
 =====
 
-La siguiente guía tiene el fin de normalizar la creación y definición de nombres de ID's para componentes y elementos para proyectos de e-commerce en I2B Technologies y los tests unitarios que se deban hacer una vez creadas las funcionalidades. 
 
-Se apoya en la [Guía para el Código Frontend](README.md) y en [MutableCSS](mutable-css.md) para su concepción e implementación.
+The following guide is intended to standardize the creation and definition of IDs names for elements and components for e-commerce projects in I2B Technologies and  theunit tests that should be done once created their functionality. 
+
+It relies on the [Frontend Code Guide](frontend-guide_EN.md) and on [MutableCSS](mutable-css_EN.md) for it's conception and implementation.
 
 ---
 
-**Patrón base:** 
+**Base pattern:** 
 
-Para todo [componente](mutable-css.md#componentes) (funcionalidad individual y que contiene un conjunto de elementos):
+For every [component](mutable-css_EN.md#components) (individual functionality that contains a set of elements):
 - lowerCamelCased
-- en inglés
-- la primera palabra en minúscula y singular y representa la función del componente
-- la segunda palabra `Box`
-- Componentes que son muy amplios no necesariamente tendrá sus subcomponentes o elementos marcados, por ej. *página de productos* y *opciones de los filtros de productos*. Bastará con marcas el componente principal (están marcados en este documento con un 👓).
+- en english
+- the first word lowercase and singular and represents the function of the component
+- second word is `Box`
+- Broad components should not be necessarily it's sub-components named, eg. *products page* or *products filters options*. Just name the main component (shown in this document with a 👓).
 
-Ej: `loginBox`, `registerBox`, `cartBox`, `filterBox`
+Eg: `loginBox`, `registerBox`, `cartBox`, `filterBox`
 
-Para todo [elemento](mutable-css.md#elementos) (elementos indivisibles que tienen función específica dentro de su componente):
+For any [element](mutable-css_EN.md#elements) (indivisible elements that have specific function within your component):
 - lowercase
-- en inglés
-- sin espacios
-- la primera palabra hereda la funcionalidad del componente en que reside
-- la segunda palabra la acción del elemento
-- la tercera corresponde a su selector ó tipo de elemento
+- in english
+- no spaces
+- the first word inherits the functionality of the component in which it resides
+- the second word is the element's action
+- the third corresponds to the selector or type of element
 
 Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
@@ -42,7 +43,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![loginBox](images/loginBox.png)
 
-## Olvidaste tu clave
+## Forgotten password
 ```
 #recoveryBox
     #recoveryemailinput
@@ -53,7 +54,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![recoveryBox](images/recoveryBox.png)
 
-## Registro
+## Register
 ```
 #registerBox
     #registerfirstnameinput
@@ -68,7 +69,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![registerBox](images/registerBox.png)
 
-## Carro de Compras
+## Shopping cart
 
 ```
 #cartBox
@@ -78,7 +79,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![cartBox](images/cartBox.png)
 
-## Buscador
+## Search
 ```
 #searchBox
     #searchtextinput
@@ -87,12 +88,12 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![searchBox](images/searchBox.png)
 
-## Paginador 👓
+## Paginator 👓
 ```
 #paginationBox
 ```
 
-## Cupón descuento
+## Discount coupon
 ```
 #couponBox
     #couponcodeinput
@@ -101,16 +102,16 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![couponBox](images/couponBox.png)
 
-## Filtros
+## Filters
 
 ![filters](images/filters.png)
 
-### Precio
+### Price
 ```
 #filterPriceBox 👓
 ```
 
-### Marca 👓
+### Brand 👓
 ```
 #filterBrandBox
 ```
@@ -120,27 +121,27 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 #filterColorBox
 ```
 
-### Cantidad Productos 👓
+### Product quantity 👓
 ```
 #productsquantityselect
 ```
 
 ![productsQuantitySelect](images/productsQuantitySelect.png)
 
-### Ordenamiento Productos 👓
+### Products order 👓
 ```
 #productsorderselect
 ```
 
 ![productsOrderSelect](images/productsOrderSelect.png)
 
-## Productos
+## Products
 
-Para todo contenedor individual de producto, se tomará como sufijo identificador único a la nomenclatura el [SKU] del producto (UPPERCASED).
+For every individual product container shall be taken as a unique identifier to the nomenclature the suffix product's [SKU] and UPPERCASED.
 
-### Resumen de producto 👓
+### Product overview 👓
 
-Para toda página que contenga una lista de productos, el formato debe contemplar el siguiente patrón de componente:
+For every page that contains a list of products, the format should include the following standard components:
 
 ```
 #productBox[SKU]
@@ -148,7 +149,7 @@ Para toda página que contenga una lista de productos, el formato debe contempla
 
 ![productBox[SKU]](images/productBox[SKU].png)
 
-### Ficha de producto
+### Single product
 
 ```
 #productSingleBox
@@ -168,7 +169,7 @@ Para toda página que contenga una lista de productos, el formato debe contempla
 
 ![checkoutBox](images/checkoutBox.png)
 
-### Envío
+### Shipping
 
 ```
 #shippingCheckoutBox
@@ -177,20 +178,20 @@ Para toda página que contenga una lista de productos, el formato debe contempla
 
 ![shippingCheckoutBox](images/shippingCheckoutBox.png)
 
-### Resumen de compra 👓
+### Purchase summary 👓
 
 ```
 #checkoutResumeBox
 ```
 
-### Método de pago
+### Payment method
 
 ```
 #paymentCheckoutBox
 	#paymentcheckout[option]
 ```
 
-### Confirmar compra
+### Confirm payment
 
 ```
 #paymentConfirmBox
@@ -198,13 +199,13 @@ Para toda página que contenga una lista de productos, el formato debe contempla
 	#paymentcancelbutton
 ```
 
-### Compra exitosa 👓
+### Successful payment 👓
 
 ```
 #paymentSuccessBox
 ```
 
-### Compra rechazada 👓
+### Rejected payment 👓
 
 ```
 #paymentRejectBox
