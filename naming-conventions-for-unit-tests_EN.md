@@ -41,7 +41,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #loginerrormessage
 ```
 
-![loginBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/loginBox.png)
+![loginBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/loginBox.png)
 
 ## Forgotten password
 ```
@@ -52,7 +52,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #recoveryerrormessage
 ```
 
-![recoveryBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/recoveryBox.png)
+![recoveryBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/recoveryBox.png)
 
 ## Register
 ```
@@ -67,7 +67,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #registererrormessage
 ```
 
-![registerBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/registerBox.png)
+![registerBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/registerBox.png)
 
 ## Shopping cart
 
@@ -77,7 +77,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #cartpaybutton
 ```
 
-![cartBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/cartBox.png)
+![cartBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/cartBox.png)
 
 ## Search
 ```
@@ -86,7 +86,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #searchsubmitbutton
 ```
 
-![searchBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/searchBox.png)
+![searchBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/searchBox.png)
 
 ## Paginator 👓
 ```
@@ -100,11 +100,11 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #couponsubmitbutton
 ```
 
-![couponBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/couponBox.png)
+![couponBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/couponBox.png)
 
 ## Filters
 
-![filters](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/filters.png)
+![filters](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/filters.png)
 
 ### Price
 ```
@@ -126,14 +126,14 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 #productsquantityselect
 ```
 
-![productsQuantitySelect](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/productsQuantitySelect.png)
+![productsQuantitySelect](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/productsQuantitySelect.png)
 
 ### Products order 👓
 ```
 #productsorderselect
 ```
 
-![productsOrderSelect](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/productsOrderSelect.png)
+![productsOrderSelect](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/productsOrderSelect.png)
 
 ## Products
 
@@ -147,7 +147,7 @@ For every page that contains a list of products, the format should include the f
 #productBox[SKU]
 ```
 
-![productBox[SKU]](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/productBox[SKU].png)
+![productBox[SKU]](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/productBox[SKU].png)
 
 ### Single product
 
@@ -158,7 +158,7 @@ For every page that contains a list of products, the format should include the f
     #productzoombutton
 ```
 
-![productSingleBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/productSingleBox.png)
+![productSingleBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/productSingleBox.png)
 
 ### Checkout
 
@@ -167,7 +167,7 @@ For every page that contains a list of products, the format should include the f
     #checkoutproductbox[SKU]
 ```
 
-![checkoutBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/checkoutBox.png)
+![checkoutBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/checkoutBox.png)
 
 ### Shipping
 
@@ -176,7 +176,7 @@ For every page that contains a list of products, the format should include the f
     #shippingcheckout[option]
 ```
 
-![shippingCheckoutBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/images/shippingCheckoutBox.png)
+![shippingCheckoutBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/shippingCheckoutBox.png)
 
 ### Purchase summary 👓
 
