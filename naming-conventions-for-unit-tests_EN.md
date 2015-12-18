@@ -41,7 +41,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #loginerrormessage
 ```
 
-![loginBox](images/loginBox.png)
+![loginBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/loginBox.png)
 
 ## Forgotten password
 ```
@@ -52,7 +52,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #recoveryerrormessage
 ```
 
-![recoveryBox](images/recoveryBox.png)
+![recoveryBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/recoveryBox.png)
 
 ## Register
 ```
@@ -67,7 +67,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #registererrormessage
 ```
 
-![registerBox](images/registerBox.png)
+![registerBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/registerBox.png)
 
 ## Shopping cart
 
@@ -77,7 +77,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #cartpaybutton
 ```
 
-![cartBox](images/cartBox.png)
+![cartBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/cartBox.png)
 
 ## Search
 ```
@@ -86,7 +86,7 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #searchsubmitbutton
 ```
 
-![searchBox](images/searchBox.png)
+![searchBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/searchBox.png)
 
 ## Paginator 👓
 ```
@@ -100,11 +100,11 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
     #couponsubmitbutton
 ```
 
-![couponBox](images/couponBox.png)
+![couponBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/couponBox.png)
 
 ## Filters
 
-![filters](images/filters.png)
+![filters](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/filters.png)
 
 ### Price
 ```
@@ -126,14 +126,14 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 #productsquantityselect
 ```
 
-![productsQuantitySelect](images/productsQuantitySelect.png)
+![productsQuantitySelect](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/productsQuantitySelect.png)
 
 ### Products order 👓
 ```
 #productsorderselect
 ```
 
-![productsOrderSelect](images/productsOrderSelect.png)
+![productsOrderSelect](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/productsOrderSelect.png)
 
 ## Products
 
@@ -147,7 +147,7 @@ For every page that contains a list of products, the format should include the f
 #productBox[SKU]
 ```
 
-![productBox[SKU]](images/productBox[SKU].png)
+![productBox[SKU]](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/productBox[SKU].png)
 
 ### Single product
 
@@ -158,7 +158,7 @@ For every page that contains a list of products, the format should include the f
     #productzoombutton
 ```
 
-![productSingleBox](images/productSingleBox.png)
+![productSingleBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/productSingleBox.png)
 
 ### Checkout
 
@@ -167,7 +167,7 @@ For every page that contains a list of products, the format should include the f
     #checkoutproductbox[SKU]
 ```
 
-![checkoutBox](images/checkoutBox.png)
+![checkoutBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/checkoutBox.png)
 
 ### Shipping
 
@@ -176,7 +176,7 @@ For every page that contains a list of products, the format should include the f
     #shippingcheckout[option]
 ```
 
-![shippingCheckoutBox](images/shippingCheckoutBox.png)
+![shippingCheckoutBox](https://raw.githubusercontent.com/I2BTech/MutableCSS/master/images/shippingCheckoutBox.png)
 
 ### Purchase summary 👓
 

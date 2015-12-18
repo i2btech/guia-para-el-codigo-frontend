@@ -27,3 +27,6 @@
 	- mergeado scripts lt IE8- en lt-ie9.js
 - 20151127:
 	- agregado *guia-nomenclatura-tests-unitarios.md*
+- 20151218:
+	- new format
+	- 2 languages: english & spanish
