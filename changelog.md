@@ -30,3 +30,5 @@
 - 20151218:
 	- new format
 	- 2 languages: english & spanish
+- 20151223: 
+	- *twitter-bootstrap-i2b_EN.md* added

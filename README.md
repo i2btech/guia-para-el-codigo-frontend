@@ -14,6 +14,7 @@ Frontend Web Development Documentation
 - [Frontend Code Guide @ I2B](frontend-guide_EN.md)
 - [Mutable CSS](mutable-css_EN.md)
 - [Naming conventions for unit tests](naming-conventions-for-unit-tests_EN.md)
+- [Bootstrap Components for I2B](twitter-bootstrap-i2b_EN.md)
 
 
 ---
