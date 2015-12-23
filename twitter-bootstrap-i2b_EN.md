@@ -7,6 +7,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Tabs
 **CSS Class:** `.nav-tabs`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/tab.png)
+
 **Example:**
 ```
 <ul class="nav nav-tabs">
@@ -20,6 +22,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Navbar
 **CSS Class:** `.navbar`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/navbar.png)
+
 **Example:**
 
 ```
@@ -32,6 +36,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Brand image
 **CSS Class:** `.navbar-brand`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/brandimage.png)
+
 **Example:**
 ```
 <a class="navbar-brand" href="#">
@@ -41,6 +47,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ## Forms
 **CSS Class:** `.navbar-form`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/form.png)
 
 **Example:** 
 ```
@@ -55,6 +63,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Button
 **CSS Class:** `.btn`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/button.png)
+
 **Example:** 
 ```
 <a class="btn btn-default" href="#">Link</a>
@@ -65,6 +75,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ### Button group
 **CSS Class:** `.btn-group`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/buttongroup.png)
 
 **Example:** 
 ```
@@ -77,6 +89,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ### Button toolbar
 **CSS Class:** `.btn-toolbar`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/buttontoolbar.png)
 
 **Example:** 
 ```
@@ -91,19 +105,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 **Example:** `<input type="text" class="form-control" placeholder="Text field">`
 
-### Input group
-**CSS Class:** `.input-group`
-
-**Example:**
-```
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username">
-</div>
-```
-
 ## Checkbox & radio 
-**CSS Class:** `.input-group`
+**CSS Class:** `.input-group`, `.input-checkbox` and `.input-radio`
 
 **Example:**
 ```
@@ -119,7 +122,7 @@ This document was build to normalize the naming conventions to build web interfa
 **Requirement:** TODO
 
 ## Select
-**CSS Class:** `.input-group`
+**CSS Class:** `.input-group` and `.input-select`
 
 **Example:**
 ```
@@ -136,6 +139,14 @@ This document was build to normalize the naming conventions to build web interfa
 ## Breadcrumbs
 **CSS Class:** `.breadcrumb`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/breadcrumb.png)
+
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Page 1</a></li>
+  <li class="active">Page 2</li>
+</ol>
+
 **Example:**
 ```
 <ol class="breadcrumb">
@@ -147,6 +158,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ## Pagination
 **CSS Class:** `.pagination`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/pagination.png)
 
 **Example:**
 ```
@@ -164,6 +177,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Page header
 **CSS Class:** `.page-header`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/pageheader.png)
+
 **Example:**
 ```
 <div class="page-header">
@@ -173,6 +188,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ## Thumbnails
 **CSS Class:** `.thumbnail`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/thumbnail.png)
 
 **Example:**
 ```
@@ -188,6 +205,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ## Alerts
 **CSS Class:** `.alert`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/alert.png)
 
 **Example:**
 ```
@@ -208,6 +227,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Progress bars
 **CSS Class:** `.progress` y `.progress-bar`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/progressbar.png)
+
 **Example:**
 ```
 <div class="progress">
@@ -217,6 +238,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ## Media object
 **CSS Class:** `.media` y `.media-object`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/mediaobject.png)
 
 **Example:**
 ```
@@ -236,6 +259,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## List linked group
 **CSS Class:** `.list-group`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/listgroup.png)
+
 **Example:**
 ```
 <nav class="list-group">
@@ -250,6 +275,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Tables
 **CSS Class:** `.table`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/table.png)
+
 **Example:**
 ```
 <table class="table">
@@ -257,16 +284,10 @@ This document was build to normalize the naming conventions to build web interfa
 </table>
 ```
 
-## Images (responsive)
-**CSS Class:** `.img-responsive`
-
-**Example:**
-```
-<img src="..." class="img-responsive" alt="...">
-```
-
 ## Modal windows
 **CSS Class:** `.modal`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/modal.png)
 
 **Example:**
 ```
@@ -289,6 +310,8 @@ This document was build to normalize the naming conventions to build web interfa
 ## Popover
 **CSS Class:** `.btn-popover`
 
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/popover.png)
+
 **Example:**
 ```
 <button type="button" class="btn btn-default btn-popover" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging.">Popover</button>
@@ -297,6 +320,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ## Collapsible / Accordion
 **CSS Class:** `.collapse` and/or '.panel-collapse`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/accordion.png)
 
 **Example:**
 ```
@@ -311,6 +336,8 @@ This document was build to normalize the naming conventions to build web interfa
 
 ## Carousel
 **CSS Class:** `.carousel`
+
+![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/carousel.png)
 
 **Example:**
 ```
