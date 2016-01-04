@@ -141,12 +141,6 @@ This document was build to normalize the naming conventions to build web interfa
 
 ![](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/breadcrumb.png)
 
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Page 1</a></li>
-  <li class="active">Page 2</li>
-</ol>
-
 **Example:**
 ```
 <ol class="breadcrumb">
