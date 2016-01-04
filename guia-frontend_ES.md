@@ -330,7 +330,8 @@ Links:
 El HTML generado contiene la siguiente estructura:
 
 ```html
-<!DOCTYPE html(lang='es')>
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>

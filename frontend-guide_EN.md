@@ -333,7 +333,8 @@ As a basis for all new web projects in I2B, the use of a boilerplate that have t
 The generated HTML contains the following structure:
 
 ```html
-<!DOCTYPE html(lang='es')>
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
