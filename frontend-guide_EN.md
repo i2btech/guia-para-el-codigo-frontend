@@ -23,12 +23,13 @@ The file structure shown below and depend on the use of the chosen technology:
 project-name/
 |__ src
 |	|__ scss
-|	|	|__ scss
+|	|	|__ style.scss
 |	|	|__ inc
 |	|		|__ mixins.scss
 |	|		|__ normalize.scss
 |	|		|__ colors.scss
 |	|		|__ variables.scss
+|	|		|__ components.scss
 |	|
 |	|__ jade
 |	|	|__ page.jade

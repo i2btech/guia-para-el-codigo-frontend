@@ -21,12 +21,13 @@ La estructura de archivos se muestra a continuación y dependerá del uso de las
 nombre-proyecto/
 |__ src
 |	|__ scss
-|	|	|__ scss
+|	|	|__ style.scss
 |	|	|__ inc
 |	|		|__ mixins.scss
 |	|		|__ normalize.scss
 |	|		|__ colors.scss
 |	|		|__ variables.scss
+|	|		|__ components.scss
 |	|
 |	|__ jade
 |	|	|__ page.jade
