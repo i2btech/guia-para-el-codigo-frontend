@@ -53,6 +53,15 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![recoveryBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/recoveryBox.png)
 
+## Actualizar clave
+```
+#updatepasswordBox
+    #updatepasswordnewinput
+    #updatepasswordrepeatinput
+    #updatepasswordsubmitbutton
+    #updatepasswordcancelbutton
+```
+
 ## Registro
 ```
 #registerBox
