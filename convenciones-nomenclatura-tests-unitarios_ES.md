@@ -78,6 +78,14 @@ Ej: `loginsubmitbutton`, `recoveryerrormessage`
 
 ![cartBox](https://raw.githubusercontent.com/I2BTech/guia-para-el-codigo-frontend/master/images/cartBox.png)
 
+## Carro de Compras Rápido
+
+```
+#quickcartBox
+    #quickcartemptybutton
+    #quickcartpaybutton
+```
+
 ## Buscador
 ```
 #searchBox
